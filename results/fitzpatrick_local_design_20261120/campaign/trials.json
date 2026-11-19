@@ -1,0 +1,5027 @@
+[
+  {
+    "method": "lattice",
+    "scenario": "clear",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 2.1378699999559103,
+    "pipeline_max_ms": 265.977589999693,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "clear",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.917100249897885,
+    "pipeline_max_ms": 270.8044149999296,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "clear",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 2.082834250245469,
+    "pipeline_max_ms": 266.6068630001064,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "teb",
+    "scenario": "clear",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 2.0058517498000583,
+    "pipeline_max_ms": 266.22350300021935,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "dwa",
+    "scenario": "clear",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72966631408746,
+    "simulated_s": 27.35,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 547,
+    "planning_call_p95_ms": 0.6508612998004536,
+    "pipeline_p95_ms": 0.7870032999562682,
+    "pipeline_max_ms": 0.9515229999124131,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12332979226433265
+  },
+  {
+    "method": "lattice",
+    "scenario": "A",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2885590516440922,
+        "rejoin_s": 8.189854942852605,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4969841497091543,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2885590516440922,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.738669000242226,
+    "pipeline_p95_ms": 2.546202200028346,
+    "pipeline_max_ms": 268.2424150002589,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17777908346447713
+  },
+  {
+    "method": "teb",
+    "scenario": "A",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.1992971382525311,
+        "rejoin_s": 8.008580389882896,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.4086342573370846,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1992971382525311,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 20.229211999776453,
+    "pipeline_p95_ms": 2.607174449872218,
+    "pipeline_max_ms": 271.35502600003747,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12129302127652342
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "A",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.33483951078156965,
+        "rejoin_s": 8.179698235542602,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5615025391763672,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.33483951078156965,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 24.99841799999558,
+    "pipeline_p95_ms": 2.3938921998706073,
+    "pipeline_max_ms": 252.69836899997244,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14710528927226696
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "A",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2694820025218925,
+        "rejoin_s": 8.121779397152352,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4992480816636643,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2694820025218925,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 11.572340000384429,
+    "pipeline_p95_ms": 2.2871673999816267,
+    "pipeline_max_ms": 256.1957580001035,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16225558296220888
+  },
+  {
+    "method": "dwa",
+    "scenario": "A",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72841143089554,
+    "simulated_s": 27.75,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.0856624493467021,
+        "rejoin_s": 8.920835181562039,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.2956004680249022,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.0856624493467021,
+    "command_ticks": 555,
+    "reached_stop": true,
+    "active_plan_calls": 555,
+    "planning_call_p95_ms": 0.6955667000056565,
+    "pipeline_p95_ms": 0.8708275000117282,
+    "pipeline_max_ms": 1.0798220000651781,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.154219920191212
+  },
+  {
+    "method": "teb",
+    "scenario": "B",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.17018812515467258,
+        "rejoin_s": 38.115706480173486,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.3785090908861581,
+        "dwell": 23,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17018812515467258,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 15.797550000115734,
+    "pipeline_p95_ms": 2.0522894000805523,
+    "pipeline_max_ms": 269.310970999868,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1221114726310879
+  },
+  {
+    "method": "dwa",
+    "scenario": "B",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73066551748117,
+    "simulated_s": 27.55,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.0789234682709506,
+        "rejoin_s": 39.02696495969434,
+        "first_detection_s": 30.729632006876233,
+        "passing_offset_m": -0.2849861473773233,
+        "dwell": 14,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.0789234682709506,
+    "command_ticks": 551,
+    "reached_stop": true,
+    "active_plan_calls": 551,
+    "planning_call_p95_ms": 0.6381429998327803,
+    "pipeline_p95_ms": 0.8200805002616107,
+    "pipeline_max_ms": 1.1490350002532068,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13632458330953764
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "B",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.21241218053779826,
+        "rejoin_s": 38.13600942612777,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.4246825921965237,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.21241218053779826,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 21.09860100017613,
+    "pipeline_p95_ms": 2.589197299994339,
+    "pipeline_max_ms": 282.8933539999525,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17114291787173364
+  },
+  {
+    "method": "lattice",
+    "scenario": "B",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.16529472831199132,
+        "rejoin_s": 38.187747978295626,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.3705687867824385,
+        "dwell": 23,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.16529472831199132,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.420331999834161,
+    "pipeline_p95_ms": 2.98244419993807,
+    "pipeline_max_ms": 262.1712000000116,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14963680233850235
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "B",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.25097503959948114,
+        "rejoin_s": 38.13338835247191,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": -0.4717133453488147,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.25097503959948114,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 21.777810999992653,
+    "pipeline_p95_ms": 2.7285668501235705,
+    "pipeline_max_ms": 265.7536560000153,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13602384373563398
+  },
+  {
+    "method": "lattice",
+    "scenario": "AB",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2885590516440922,
+        "rejoin_s": 8.189854942852605,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4969841497091543,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.16628101687160818,
+        "rejoin_s": 38.106482991422524,
+        "first_detection_s": 30.794337213104935,
+        "passing_offset_m": 0.37154962747042414,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.16628101687160818,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 6.993909900165818,
+    "pipeline_p95_ms": 3.0606140000600135,
+    "pipeline_max_ms": 266.0689919998731,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.20473763424741598
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "AB",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.0,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2694820025218925,
+        "rejoin_s": 8.121779397152352,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4992480816636643,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.18813385954555495,
+        "rejoin_s": 38.0954723688522,
+        "first_detection_s": 30.768928545172322,
+        "passing_offset_m": 0.3994039197427937,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18813385954555495,
+    "command_ticks": 560,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 19.60021514987602,
+    "pipeline_p95_ms": 2.847418650389954,
+    "pipeline_max_ms": 254.3410439998297,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.20787372404385737
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "AB",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.33483951078156965,
+        "rejoin_s": 8.179698235542602,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5615025391763672,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.2742432703337638,
+        "rejoin_s": 38.164383246084036,
+        "first_detection_s": 30.7839276050138,
+        "passing_offset_m": -0.4880206718615166,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2742432703337638,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 31.75881690017377,
+    "pipeline_p95_ms": 2.9160835998482066,
+    "pipeline_max_ms": 268.7972159997116,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17220353164750327
+  },
+  {
+    "method": "dwa",
+    "scenario": "AB",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.731020238846796,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.0856624493467021,
+        "rejoin_s": 8.920835181562039,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.2956004680249022,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.07726337494978743,
+        "rejoin_s": 39.038260691944124,
+        "first_detection_s": 30.729560411063925,
+        "passing_offset_m": -0.2831271604126915,
+        "dwell": 14,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.07726337494978743,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 559,
+    "planning_call_p95_ms": 0.6692717001897108,
+    "pipeline_p95_ms": 0.8842857998388354,
+    "pipeline_max_ms": 1.0250660002384393,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.163591182935292
+  },
+  {
+    "method": "teb",
+    "scenario": "AB",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.1992971382525311,
+        "rejoin_s": 8.008580389882896,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.4086342573370846,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.169895520138105,
+        "rejoin_s": 38.09387967017669,
+        "first_detection_s": 30.770659916040852,
+        "passing_offset_m": 0.37847121320594557,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.169895520138105,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 19.910179349972168,
+    "pipeline_p95_ms": 2.6460628001586883,
+    "pipeline_max_ms": 257.9192409998541,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1342622568405813
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_left",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72771500537698,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1518089638808588,
+        "rejoin_s": 36.76251166699722,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.32716802943002826,
+        "dwell": 12,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1518089638808588,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 549,
+    "planning_call_p95_ms": 0.6683286000225053,
+    "pipeline_p95_ms": 0.8424435998676927,
+    "pipeline_max_ms": 0.940627000090899,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13550149717883167
+  },
+  {
+    "method": "teb",
+    "scenario": "single_left",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.17510048022315677,
+        "rejoin_s": 35.42073045867678,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.3561089540812126,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17510048022315677,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 17.369196999879932,
+    "pipeline_p95_ms": 2.4611421998542937,
+    "pipeline_max_ms": 255.58645999990404,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11781243628736807
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_left",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.25480043189613827,
+        "rejoin_s": 35.67553598335913,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.43523247263367604,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.25480043189613827,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 18.40138699981253,
+    "pipeline_p95_ms": 2.8507960000752064,
+    "pipeline_max_ms": 259.99905499975284,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1731043288811123
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_left",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19277960875235317,
+        "rejoin_s": 35.58543736247436,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.36812546216076325,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19277960875235317,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.522370999846316,
+    "pipeline_p95_ms": 2.7012339000293646,
+    "pipeline_max_ms": 258.89995599982285,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14953627464279648
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_left",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.2662033111677318,
+        "rejoin_s": 35.530492040970664,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.46372213449707855,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2662033111677318,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 22.481395000340854,
+    "pipeline_p95_ms": 3.1051591498908233,
+    "pipeline_max_ms": 284.5593560000452,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1403522778131329
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_right",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19431701338230573,
+        "rejoin_s": 35.58471389335038,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3696678704972212,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19431701338230573,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.585996000012528,
+    "pipeline_p95_ms": 2.632195449928076,
+    "pipeline_max_ms": 262.96215599995776,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15055169909840724
+  },
+  {
+    "method": "teb",
+    "scenario": "single_right",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.17572626911118355,
+        "rejoin_s": 35.54740120521707,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3536862697951815,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17572626911118355,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 14.931584000350995,
+    "pipeline_p95_ms": 2.4911675000112155,
+    "pipeline_max_ms": 255.9701000000132,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1210331211425626
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_right",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.7250290821274,
+    "simulated_s": 27.7,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.12763588256541414,
+        "rejoin_s": 37.35146300616986,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.32251838700390206,
+        "dwell": 6,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.12763588256541414,
+    "command_ticks": 554,
+    "reached_stop": true,
+    "active_plan_calls": 554,
+    "planning_call_p95_ms": 0.6962023498317651,
+    "pipeline_p95_ms": 0.8791843501057884,
+    "pipeline_max_ms": 1.2175490001027356,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15342068353772947
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_right",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1857654590072279,
+        "rejoin_s": 35.52728501121928,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.36442916423336535,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1857654590072279,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 16.325762999713334,
+    "pipeline_p95_ms": 2.9206655996858895,
+    "pipeline_max_ms": 260.75089999994816,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1533805760532888
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_right",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.31796222659355816,
+        "rejoin_s": 35.56197745471348,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.5280381659627333,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.31796222659355816,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 30.682829999932437,
+    "pipeline_p95_ms": 3.1165714000053413,
+    "pipeline_max_ms": 256.31448900003306,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13547086657501003
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_left_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.195178973283766,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.3838701646360676,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.15058621938704148,
+        "rejoin_s": 38.25491120660453,
+        "first_detection_s": 30.57459418925262,
+        "passing_offset_m": -0.7027037200023749,
+        "dwell": 22,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.15058621938704148,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 19.039124399751017,
+    "pipeline_p95_ms": 2.5340364002659044,
+    "pipeline_max_ms": 259.7759110003608,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1518108086494585
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_left_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.400000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1942228584268067,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.36959968152371264,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.18496453693126852,
+        "rejoin_s": 37.98856422526362,
+        "first_detection_s": 30.5908376007164,
+        "passing_offset_m": 0.36048590575666867,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18496453693126852,
+    "command_ticks": 568,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 11.597354300420193,
+    "pipeline_p95_ms": 3.70913590006694,
+    "pipeline_max_ms": 265.84081900000456,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.25824746372770846
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_left_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.6119885344465448,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.798050600856637,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1252243314974863,
+        "rejoin_s": 38.0467576852905,
+        "first_detection_s": 30.58034430521731,
+        "passing_offset_m": -0.7214735818423392,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1252243314974863,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 22.1984671002474,
+    "pipeline_p95_ms": 3.5930313998960632,
+    "pipeline_max_ms": 279.1929340000934,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1687476729419313
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_left_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72789180821205,
+    "simulated_s": 28.2,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13456180539450485,
+        "rejoin_s": null,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.3106254377304958,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.12643300545297048,
+        "rejoin_s": 39.95428865540101,
+        "first_detection_s": 30.621403440422363,
+        "passing_offset_m": 0.3573319892423409,
+        "dwell": 5,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.12643300545297048,
+    "command_ticks": 564,
+    "reached_stop": true,
+    "active_plan_calls": 564,
+    "planning_call_p95_ms": 0.6580865000387348,
+    "pipeline_p95_ms": 0.8808328002260168,
+    "pipeline_max_ms": 1.0297449998688535,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.18755613816812028
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_left_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.650000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.28049715940591574,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.476086788166089,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.25711747705919513,
+        "rejoin_s": 38.20967950662182,
+        "first_detection_s": 30.583162799870312,
+        "passing_offset_m": -0.8269628555633355,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.25711747705919513,
+    "command_ticks": 573,
+    "reached_stop": true,
+    "active_plan_calls": 4,
+    "planning_call_p95_ms": 31.79046190000463,
+    "pipeline_p95_ms": 3.0598879998251505,
+    "pipeline_max_ms": 268.2210920002035,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.2286105569235379
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_right_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.400000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.20274598777946667,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3838375860249992,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.14764669920698964,
+        "rejoin_s": 38.18176399712499,
+        "first_detection_s": 30.596494192304913,
+        "passing_offset_m": 0.7061679587110918,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.14764669920698964,
+    "command_ticks": 568,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 23.21738330003882,
+    "pipeline_p95_ms": 3.5282498501601367,
+    "pipeline_max_ms": 254.59715299984964,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1967056843261149
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_right_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19559806828981002,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": -0.7339594310176129,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.2272683963021433,
+        "rejoin_s": 38.054909482943906,
+        "first_detection_s": 30.605123330222607,
+        "passing_offset_m": -0.41645533144934194,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19559806828981002,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 19.958911299772808,
+    "pipeline_p95_ms": 2.806237000277179,
+    "pipeline_max_ms": 260.2192660001492,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1709471758802733
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_right_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72986474819154,
+    "simulated_s": 27.8,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.12763588256541414,
+        "rejoin_s": null,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.3288833783236009,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.12855741539112225,
+        "rejoin_s": 39.70659968605078,
+        "first_detection_s": 30.630147393621844,
+        "passing_offset_m": 0.6644082878414844,
+        "dwell": 7,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.12763588256541414,
+    "command_ticks": 556,
+    "reached_stop": true,
+    "active_plan_calls": 556,
+    "planning_call_p95_ms": 0.8533955001439608,
+    "pipeline_p95_ms": 1.0638805002827212,
+    "pipeline_max_ms": 2.8011379999952624,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14982003592800142
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_right_first",
+    "seed": 11,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.20362489704508907,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3789741700291543,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.18329798751678744,
+        "rejoin_s": 38.01642706278479,
+        "first_detection_s": 30.594168298598124,
+        "passing_offset_m": -0.358986371424527,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18329798751678744,
+    "command_ticks": 569,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 10.97747494993655,
+    "pipeline_p95_ms": 3.3990807998634414,
+    "pipeline_max_ms": 256.2986349998937,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.262246347338406
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_right_first",
+    "seed": 11,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_solver_4",
+    "progress_m": 30.59461630381883,
+    "simulated_s": 18.1,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 2.4033229316370646,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 4.897019141652141,
+        "rejoin_s": null,
+        "first_detection_s": null,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 2.4033229316370646,
+    "command_ticks": 362,
+    "reached_stop": false,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 27.4242279997452,
+    "pipeline_p95_ms": 1.8948599999930584,
+    "pipeline_max_ms": 270.3142459999981,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.09875479542572556
+  },
+  {
+    "method": "lattice",
+    "scenario": "clear",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 2.015193500028545,
+    "pipeline_max_ms": 257.42504100026053,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "clear",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.9261099999994258,
+    "pipeline_max_ms": 261.8508360001215,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "clear",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.6871992500000488,
+    "pipeline_max_ms": 262.0815919999586,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "dwa",
+    "scenario": "clear",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72966631408746,
+    "simulated_s": 27.35,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 547,
+    "planning_call_p95_ms": 0.6781839000723265,
+    "pipeline_p95_ms": 0.8272249998299227,
+    "pipeline_max_ms": 0.9815550001803786,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12332979226433265
+  },
+  {
+    "method": "teb",
+    "scenario": "clear",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.9568754997862925,
+    "pipeline_max_ms": 264.36674100023083,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "lattice",
+    "scenario": "A",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.28856588671374567,
+        "rejoin_s": 8.189868230679952,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4969895014435187,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.28856588671374567,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.382337999639276,
+    "pipeline_p95_ms": 2.840710799978295,
+    "pipeline_max_ms": 262.0514209997964,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1771783971193316
+  },
+  {
+    "method": "teb",
+    "scenario": "A",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.19723289694695828,
+        "rejoin_s": 8.008434817273256,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.40676183648651193,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19723289694695828,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 14.723245999903156,
+    "pipeline_p95_ms": 2.0545239498687806,
+    "pipeline_max_ms": 258.7673980001455,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11889153123353793
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "A",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.55,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.3824735140348403,
+        "rejoin_s": 8.207631859275477,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.625663035993942,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.3824735140348403,
+    "command_ticks": 551,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 26.56713199985461,
+    "pipeline_p95_ms": 2.754833499693632,
+    "pipeline_max_ms": 269.9264849998144,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14555964189017856
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "A",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.27258625209008785,
+        "rejoin_s": 8.037601610448768,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.501357812792088,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.27258625209008785,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 11.548664999736502,
+    "pipeline_p95_ms": 2.4212141500811395,
+    "pipeline_max_ms": 284.92225299987695,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15923639347817978
+  },
+  {
+    "method": "dwa",
+    "scenario": "A",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.727738932667485,
+    "simulated_s": 27.75,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.08560912795730032,
+        "rejoin_s": 8.91935180556418,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.29560898125386037,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.08560912795730032,
+    "command_ticks": 555,
+    "reached_stop": true,
+    "active_plan_calls": 555,
+    "planning_call_p95_ms": 0.6978368999625667,
+    "pipeline_p95_ms": 0.9381756998664059,
+    "pipeline_max_ms": 1.436643000033655,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15233911909685974
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "B",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.21240746861398935,
+        "rejoin_s": 38.13596593906298,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.424678150989344,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.21240746861398935,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 20.959266000318166,
+    "pipeline_p95_ms": 2.5380594000580463,
+    "pipeline_max_ms": 260.99981600009414,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17124309472512925
+  },
+  {
+    "method": "lattice",
+    "scenario": "B",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.16529467113889323,
+        "rejoin_s": 38.18774631589319,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.3705687500775718,
+        "dwell": 23,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.16529467113889323,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.592002999695978,
+    "pipeline_p95_ms": 2.735620399926119,
+    "pipeline_max_ms": 265.6613260000995,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14965002738813826
+  },
+  {
+    "method": "dwa",
+    "scenario": "B",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.723487888861264,
+    "simulated_s": 27.5,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.08341461065434726,
+        "rejoin_s": 39.12927978584247,
+        "first_detection_s": 30.729632006876233,
+        "passing_offset_m": -0.28978819967767305,
+        "dwell": 13,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.08341461065434726,
+    "command_ticks": 550,
+    "reached_stop": true,
+    "active_plan_calls": 550,
+    "planning_call_p95_ms": 0.7562839501360941,
+    "pipeline_p95_ms": 0.9223603000236834,
+    "pipeline_max_ms": 1.5119320000849257,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1380382028807441
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "B",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.7,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.2818351281642774,
+        "rejoin_s": 38.13546969429324,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": -0.5015157480551482,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2818351281642774,
+    "command_ticks": 554,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 25.931293000212463,
+    "pipeline_p95_ms": 2.8444616998513084,
+    "pipeline_max_ms": 260.2342810000664,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.139449765937233
+  },
+  {
+    "method": "teb",
+    "scenario": "B",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.1705256693025788,
+        "rejoin_s": 38.115204073352416,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.37885021989944706,
+        "dwell": 23,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1705256693025788,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 15.595499000028212,
+    "pipeline_p95_ms": 2.2486288998607047,
+    "pipeline_max_ms": 266.94354899973405,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12114721031492395
+  },
+  {
+    "method": "lattice",
+    "scenario": "AB",
+    "seed": 29,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_nonlinear_infeasible eq=0.002086 ineq=0.000000",
+    "progress_m": 34.757392123686074,
+    "simulated_s": 20.55,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.28856588671374567,
+        "rejoin_s": 8.189868230679952,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4969895014435187,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.9101521052122434,
+        "rejoin_s": null,
+        "first_detection_s": 30.8021141460765,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.28856588671374567,
+    "command_ticks": 411,
+    "reached_stop": false,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 6.7676444999051455,
+    "pipeline_p95_ms": 3.2346665499517258,
+    "pipeline_max_ms": 261.64214900018123,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1927021949000902
+  },
+  {
+    "method": "teb",
+    "scenario": "AB",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.19723289694695828,
+        "rejoin_s": 8.008434817273256,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.40676183648651193,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.1703673197386238,
+        "rejoin_s": 38.099296298895474,
+        "first_detection_s": 30.77662050754584,
+        "passing_offset_m": 0.3783528570382684,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1703673197386238,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 17.36365499994008,
+    "pipeline_p95_ms": 2.6493866001146675,
+    "pipeline_max_ms": 274.49594400013666,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13301467329229946
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "AB",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.27258625209008785,
+        "rejoin_s": 8.037601610448768,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.501357812792088,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.2085262483996096,
+        "rejoin_s": 38.145981100666226,
+        "first_detection_s": 30.770078281172907,
+        "passing_offset_m": 0.42040081799146267,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2085262483996096,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 20.322154049995333,
+    "pipeline_p95_ms": 3.69734600008087,
+    "pipeline_max_ms": 264.71280699979616,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.20904381875936134
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "AB",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.900000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.3824735140348403,
+        "rejoin_s": 8.207631859275477,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.625663035993942,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.27142094181904236,
+        "rejoin_s": 38.174391710355096,
+        "first_detection_s": 30.801172777698337,
+        "passing_offset_m": -0.4847218676339047,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.27142094181904236,
+    "command_ticks": 558,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 36.128522100239024,
+    "pipeline_p95_ms": 3.27167210002699,
+    "pipeline_max_ms": 253.33700100009082,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17159137455861137
+  },
+  {
+    "method": "dwa",
+    "scenario": "AB",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.725009897779735,
+    "simulated_s": 27.900000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.08560912795730032,
+        "rejoin_s": 8.91935180556418,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.29560898125386037,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.08395267494159149,
+        "rejoin_s": 39.0423217414354,
+        "first_detection_s": 30.72586129453256,
+        "passing_offset_m": -0.28984734460901906,
+        "dwell": 14,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.08395267494159149,
+    "command_ticks": 558,
+    "reached_stop": true,
+    "active_plan_calls": 558,
+    "planning_call_p95_ms": 0.7207093997294578,
+    "pipeline_p95_ms": 0.8805626999219385,
+    "pipeline_max_ms": 1.3936199998170196,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16504588261806363
+  },
+  {
+    "method": "teb",
+    "scenario": "single_left",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.18003239276489252,
+        "rejoin_s": 35.419029368966285,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.36170619316695224,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18003239276489252,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 16.97976000014023,
+    "pipeline_p95_ms": 2.4807262998820074,
+    "pipeline_max_ms": 262.43918199998006,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11675428878533349
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_left",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19270369264137294,
+        "rejoin_s": 35.58596796984563,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.36804933695944103,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19270369264137294,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 8.031089999803953,
+    "pipeline_p95_ms": 2.9363245500007906,
+    "pipeline_max_ms": 255.50313900021138,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15070722688609173
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_left",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.25481767470261224,
+        "rejoin_s": 35.67787442673698,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.43525272137546733,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.25481767470261224,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 18.474300999969273,
+    "pipeline_p95_ms": 2.9983710001033614,
+    "pipeline_max_ms": 267.2174670001368,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17375357960937535
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_left",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72830253018283,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.14690408767871693,
+        "rejoin_s": 36.76707692893974,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.32233632511093524,
+        "dwell": 12,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.14690408767871693,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 549,
+    "planning_call_p95_ms": 0.6819754001298862,
+    "pipeline_p95_ms": 0.85410720002983,
+    "pipeline_max_ms": 1.0889709997172758,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13550149717883167
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_left",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.7,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.29876122903683483,
+        "rejoin_s": 35.61992583122234,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.49542324645061453,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.29876122903683483,
+    "command_ticks": 554,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 28.925892999723146,
+    "pipeline_p95_ms": 3.162551799960056,
+    "pipeline_max_ms": 269.0867100000105,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.14164202606767504
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_right",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1935492060932133,
+        "rejoin_s": 35.58395755080183,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.36883822356853596,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1935492060932133,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.426129999908881,
+    "pipeline_p95_ms": 2.395233400102369,
+    "pipeline_max_ms": 261.94665899993197,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15036961334279494
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_right",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1838086909782683,
+        "rejoin_s": 35.53125341308899,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.36260940811982206,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1838086909782683,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 15.540392999810138,
+    "pipeline_p95_ms": 2.918500599935214,
+    "pipeline_max_ms": 271.14570999992793,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1527389332285549
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_right",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72394468368012,
+    "simulated_s": 27.7,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13112257530286742,
+        "rejoin_s": 37.33278707149791,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.31942510573251687,
+        "dwell": 6,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.13112257530286742,
+    "command_ticks": 554,
+    "reached_stop": true,
+    "active_plan_calls": 554,
+    "planning_call_p95_ms": 0.647746250047021,
+    "pipeline_p95_ms": 0.8694165999486358,
+    "pipeline_max_ms": 1.0346340000069176,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1543590450911253
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_right",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1642617226930289,
+        "rejoin_s": 35.46277293025562,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3460831770186444,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1642617226930289,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 24.2117220000182,
+    "pipeline_p95_ms": 2.904908999971667,
+    "pipeline_max_ms": 261.55205400027626,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.122703159870691
+  },
+  {
+    "method": "teb",
+    "scenario": "single_right",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.17676281130155674,
+        "rejoin_s": 35.54708860694532,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.35473418201619716,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17676281130155674,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 14.571899000202393,
+    "pipeline_p95_ms": 2.406526199820291,
+    "pipeline_max_ms": 261.0057520000737,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12037958640101727
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_left_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.23423427777203704,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.418787581465519,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.23584742429873445,
+        "rejoin_s": 38.17167732960192,
+        "first_detection_s": 30.583162799870312,
+        "passing_offset_m": -0.7893336756464873,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.23423427777203704,
+    "command_ticks": 567,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 32.773706300031336,
+    "pipeline_p95_ms": 3.33208930019282,
+    "pipeline_max_ms": 266.8281000001116,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1886599844177287
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_left_first",
+    "seed": 29,
+    "status": "planner_rejection",
+    "detail": "no feasible local path",
+    "progress_m": 35.83934567226104,
+    "simulated_s": 21.0,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.4011089538345825,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.5836369095545494,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.13975740992143532,
+        "rejoin_s": null,
+        "first_detection_s": 30.576841254528848,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.13975740992143532,
+    "command_ticks": 420,
+    "reached_stop": false,
+    "active_plan_calls": 4,
+    "planning_call_p95_ms": 29.77726934968814,
+    "pipeline_p95_ms": 2.916587000072468,
+    "pipeline_max_ms": 265.2203460002056,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12629861906112338
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_left_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19305941500499452,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.3849499895623442,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1494053428474323,
+        "rejoin_s": 38.25697725860146,
+        "first_detection_s": 30.57459785495912,
+        "passing_offset_m": -0.7014641799340835,
+        "dwell": 22,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1494053428474323,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 19.083718600268185,
+    "pipeline_p95_ms": 2.424803800295195,
+    "pipeline_max_ms": 255.03666599979624,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1513127601504757
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_left_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.400000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19728717585454042,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.37267542710576507,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1850926335789735,
+        "rejoin_s": 38.05447270361905,
+        "first_detection_s": 30.590841714248928,
+        "passing_offset_m": 0.3606101196408779,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1850926335789735,
+    "command_ticks": 568,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 10.41164210023453,
+    "pipeline_p95_ms": 2.9991225499770726,
+    "pipeline_max_ms": 256.3452889999098,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.26245882244660984
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_left_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153233549806,
+    "simulated_s": 28.2,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13083140138506583,
+        "rejoin_s": null,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.30715033346060633,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.12777384575678874,
+        "rejoin_s": 39.91467368897998,
+        "first_detection_s": 30.621403440422363,
+        "passing_offset_m": 0.36988356314101173,
+        "dwell": 5,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.12777384575678874,
+    "command_ticks": 564,
+    "reached_stop": true,
+    "active_plan_calls": 564,
+    "planning_call_p95_ms": 0.7018984496880877,
+    "pipeline_p95_ms": 0.9992871998747435,
+    "pipeline_max_ms": 1.2387110000418033,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.18527342263463423
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_right_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.20274443490393418,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.38383551402290644,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.148482788889774,
+        "rejoin_s": 38.18985131913693,
+        "first_detection_s": 30.596494192304913,
+        "passing_offset_m": 0.706844803497902,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.148482788889774,
+    "command_ticks": 567,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 24.87016759994276,
+    "pipeline_p95_ms": 3.5170638998806667,
+    "pipeline_max_ms": 255.4097610000099,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.19795423800249637
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_right_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.20141493462314458,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": -0.7396915859066633,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.21381160795831827,
+        "rejoin_s": 37.94969236065201,
+        "first_detection_s": 30.60518242837937,
+        "passing_offset_m": -0.4023177541051741,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.20141493462314458,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 18.394674299952385,
+    "pipeline_p95_ms": 2.535488599824021,
+    "pipeline_max_ms": 267.2949919997336,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1711261302784351
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_right_first",
+    "seed": 29,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_solver_4",
+    "progress_m": 30.603302186670053,
+    "simulated_s": 18.1,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 2.4111439140857795,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 4.902201235143671,
+        "rejoin_s": null,
+        "first_detection_s": null,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 2.4111439140857795,
+    "command_ticks": 362,
+    "reached_stop": false,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 25.03718000025401,
+    "pipeline_p95_ms": 2.0572981000896093,
+    "pipeline_max_ms": 258.4531799998331,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.0906605968886163
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_right_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.2030586053144569,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.37840939343895236,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1825601170881545,
+        "rejoin_s": 38.01165404816222,
+        "first_detection_s": 30.5935885650776,
+        "passing_offset_m": -0.35828114425718305,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1825601170881545,
+    "command_ticks": 569,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 11.020850049885667,
+    "pipeline_p95_ms": 3.040192800017394,
+    "pipeline_max_ms": 260.16485900026964,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.26179005608473277
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_right_first",
+    "seed": 29,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.7288340081032,
+    "simulated_s": 28.5,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.12975562362600107,
+        "rejoin_s": null,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.3155507414520668,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.12328286199555621,
+        "rejoin_s": 39.70167941792772,
+        "first_detection_s": 30.630147393621844,
+        "passing_offset_m": -0.324884878271629,
+        "dwell": 7,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.12328286199555621,
+    "command_ticks": 570,
+    "reached_stop": true,
+    "active_plan_calls": 570,
+    "planning_call_p95_ms": 0.7212507501435538,
+    "pipeline_p95_ms": 0.8980136502486856,
+    "pipeline_max_ms": 1.26985999986573,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.20278759088648368
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "clear",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.62435925005866,
+    "pipeline_max_ms": 272.88274200009255,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "dwa",
+    "scenario": "clear",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72966631408746,
+    "simulated_s": 27.35,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 547,
+    "planning_call_p95_ms": 0.6687893000616896,
+    "pipeline_p95_ms": 0.8060568000018973,
+    "pipeline_max_ms": 0.9634650000407419,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12332979226433265
+  },
+  {
+    "method": "lattice",
+    "scenario": "clear",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.76355400014927,
+    "pipeline_max_ms": 270.1241360000495,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "teb",
+    "scenario": "clear",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.8605995001053088,
+    "pipeline_max_ms": 253.53821399994558,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "clear",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.3,
+    "encounters": [],
+    "min_body_gap_m": null,
+    "command_ticks": 546,
+    "reached_stop": true,
+    "active_plan_calls": 0,
+    "planning_call_p95_ms": null,
+    "pipeline_p95_ms": 1.731094249976195,
+    "pipeline_max_ms": 257.1042589997887,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.10479974341683873
+  },
+  {
+    "method": "dwa",
+    "scenario": "A",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73059520160995,
+    "simulated_s": 27.75,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.0855784728639213,
+        "rejoin_s": 8.952719471809836,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.29525503049965346,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.0855784728639213,
+    "command_ticks": 555,
+    "reached_stop": true,
+    "active_plan_calls": 555,
+    "planning_call_p95_ms": 0.7007763999354211,
+    "pipeline_p95_ms": 0.8713861999240179,
+    "pipeline_max_ms": 1.0926719996859902,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15515177108906006
+  },
+  {
+    "method": "lattice",
+    "scenario": "A",
+    "seed": 47,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_nonlinear_infeasible eq=0.001359 ineq=0.000000",
+    "progress_m": 6.3472244669041835,
+    "simulated_s": 4.55,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2889718681521772,
+        "rejoin_s": null,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4973644096689879,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2889718681521772,
+    "command_ticks": 91,
+    "reached_stop": false,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.239233000087552,
+    "pipeline_p95_ms": 2.7284755998380206,
+    "pipeline_max_ms": 261.0251679998328,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16740138050102638
+  },
+  {
+    "method": "teb",
+    "scenario": "A",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.19797276099201622,
+        "rejoin_s": 8.007521015465308,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.4075082487010297,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19797276099201622,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 14.69440199980454,
+    "pipeline_p95_ms": 2.020675849962572,
+    "pipeline_max_ms": 257.68680700002733,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11930917819245186
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "A",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.319923561269785,
+        "rejoin_s": 8.185024429492165,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5351126744331467,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.319923561269785,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 18.90263999985109,
+    "pipeline_p95_ms": 2.321626349953476,
+    "pipeline_max_ms": 258.7542669998584,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15682859644690395
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "A",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2725973800311508,
+        "rejoin_s": 8.03764229984311,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5013693601437914,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2725973800311508,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 12.05131500000789,
+    "pipeline_p95_ms": 2.841762150183057,
+    "pipeline_max_ms": 262.7686939999876,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15892062130553447
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "B",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.55,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.3094615138381353,
+        "rejoin_s": 38.11963375406468,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.5276910643990453,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.3094615138381353,
+    "command_ticks": 551,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 20.36693899981401,
+    "pipeline_p95_ms": 2.5219120000201656,
+    "pipeline_max_ms": 265.6278019999263,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13718006912473402
+  },
+  {
+    "method": "teb",
+    "scenario": "B",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.17446256015246558,
+        "rejoin_s": 38.11412149424348,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.3829281695271128,
+        "dwell": 23,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17446256015246558,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 17.200039999806904,
+    "pipeline_p95_ms": 2.0237874000940788,
+    "pipeline_max_ms": 264.3368490003013,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12062828176231392
+  },
+  {
+    "method": "lattice",
+    "scenario": "B",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.16529428815596137,
+        "rejoin_s": 38.09928552819831,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.3705663460792191,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.16529428815596137,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.432415000290348,
+    "pipeline_p95_ms": 2.867711850217346,
+    "pipeline_max_ms": 266.39843400016616,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15304960229907363
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "B",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.95,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.21216702424059813,
+        "rejoin_s": 38.13227195027435,
+        "first_detection_s": 30.790700609822473,
+        "passing_offset_m": 0.4244532730035115,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.21216702424059813,
+    "command_ticks": 559,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 20.737658999678388,
+    "pipeline_p95_ms": 3.0114176000552106,
+    "pipeline_max_ms": 266.92301499997484,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1718946180282362
+  },
+  {
+    "method": "dwa",
+    "scenario": "B",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72531918722712,
+    "simulated_s": 27.5,
+    "encounters": [
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.07482154628356359,
+        "rejoin_s": 39.02824817188336,
+        "first_detection_s": 30.729632006876233,
+        "passing_offset_m": -0.2807778549078119,
+        "dwell": 14,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.07482154628356359,
+    "command_ticks": 550,
+    "reached_stop": true,
+    "active_plan_calls": 550,
+    "planning_call_p95_ms": 0.7195159999582756,
+    "pipeline_p95_ms": 0.892201950046001,
+    "pipeline_max_ms": 1.3647760001731513,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1337569029654511
+  },
+  {
+    "method": "lattice",
+    "scenario": "AB",
+    "seed": 47,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_nonlinear_infeasible eq=0.001359 ineq=0.000000",
+    "progress_m": 6.3472244669041835,
+    "simulated_s": 4.55,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2889718681521772,
+        "rejoin_s": null,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.4973644096689879,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 7.566325084873615,
+        "rejoin_s": null,
+        "first_detection_s": null,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2889718681521772,
+    "command_ticks": 91,
+    "reached_stop": false,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.592491999981576,
+    "pipeline_p95_ms": 3.526779849767081,
+    "pipeline_max_ms": 271.8513909999274,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16740138050102638
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "AB",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.5,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.319923561269785,
+        "rejoin_s": 8.185024429492165,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5351126744331467,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.23475418856601354,
+        "rejoin_s": 38.06094031711083,
+        "first_detection_s": 30.7690700300856,
+        "passing_offset_m": 0.45514469671865426,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.23475418856601354,
+    "command_ticks": 550,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 23.751870599949143,
+    "pipeline_p95_ms": 2.6268142000390067,
+    "pipeline_max_ms": 263.0880110000362,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17758655776175442
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "AB",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.2725973800311508,
+        "rejoin_s": 8.03764229984311,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": 0.5013693601437914,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.20830192351912785,
+        "rejoin_s": 38.14438196260105,
+        "first_detection_s": 30.769938564903974,
+        "passing_offset_m": 0.42018313768079696,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.20830192351912785,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 19.684925149840637,
+    "pipeline_p95_ms": 3.0209999999897263,
+    "pipeline_max_ms": 257.93872599979295,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.20902765980340562
+  },
+  {
+    "method": "dwa",
+    "scenario": "AB",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.726478335032155,
+    "simulated_s": 27.900000000000002,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.0855784728639213,
+        "rejoin_s": 8.952719471809836,
+        "first_detection_s": 0.605004756496006,
+        "passing_offset_m": -0.29525503049965346,
+        "dwell": 16,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.08373444805631965,
+        "rejoin_s": 39.05511203760671,
+        "first_detection_s": 30.75027753816395,
+        "passing_offset_m": -0.28985688839903856,
+        "dwell": 14,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.08373444805631965,
+    "command_ticks": 558,
+    "reached_stop": true,
+    "active_plan_calls": 558,
+    "planning_call_p95_ms": 0.7548904002078416,
+    "pipeline_p95_ms": 0.9451631999354504,
+    "pipeline_max_ms": 1.351784999769734,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16547964389858616
+  },
+  {
+    "method": "teb",
+    "scenario": "AB",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "A",
+        "center": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "radius": 0.05,
+        "station": 5.97609567766336,
+        "minimum": 0.19797276099201622,
+        "rejoin_s": 8.007521015465308,
+        "first_detection_s": 0.6307374241943262,
+        "passing_offset_m": -0.4075082487010297,
+        "dwell": 26,
+        "passed_station": true,
+        "rejoin_required": true
+      },
+      {
+        "name": "B",
+        "center": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "radius": 0.05,
+        "station": 36.003091661015134,
+        "minimum": 0.17053602847810428,
+        "rejoin_s": 38.098707069964334,
+        "first_detection_s": 30.776629707570674,
+        "passing_offset_m": 0.37896726201665154,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17053602847810428,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 17.527035999955842,
+    "pipeline_p95_ms": 2.271710800141591,
+    "pipeline_max_ms": 256.54915699988123,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1332074498044088
+  },
+  {
+    "method": "teb",
+    "scenario": "single_left",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.18421170848748963,
+        "rejoin_s": 35.41968463260079,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.3656501053882694,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18421170848748963,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 16.6757389997656,
+    "pipeline_p95_ms": 2.1701189001305456,
+    "pipeline_max_ms": 280.4149530002178,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11911246591119787
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_left",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.55,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.23988102730839972,
+        "rejoin_s": 35.53825410763281,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.431402707603597,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.23988102730839972,
+    "command_ticks": 551,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 20.542381999803183,
+    "pipeline_p95_ms": 3.3686715000840195,
+    "pipeline_max_ms": 279.4985609998548,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1360089172934465
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_left",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.2548313991840255,
+        "rejoin_s": 35.67999378004685,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.43526879988655176,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.2548313991840255,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 19.969749999745545,
+    "pipeline_p95_ms": 2.91086000015639,
+    "pipeline_max_ms": 257.9301360001409,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17311938079886352
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_left",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.1927034623967782,
+        "rejoin_s": 35.58611015400514,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.3680489060280305,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1927034623967782,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.708986999910849,
+    "pipeline_p95_ms": 3.110344799756601,
+    "pipeline_max_ms": 265.054611999858,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15007030929471568
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_left",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.72830253018283,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.14690408767871693,
+        "rejoin_s": 36.76707692893974,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.32233632511093524,
+        "dwell": 12,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.14690408767871693,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 549,
+    "planning_call_p95_ms": 0.6855099999484082,
+    "pipeline_p95_ms": 0.897227999757888,
+    "pipeline_max_ms": 1.3016389998483646,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13550149717883167
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "single_right",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.55,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.3282061139399732,
+        "rejoin_s": 35.59878644091687,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.5240900455993839,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.3282061139399732,
+    "command_ticks": 551,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 23.809084999811603,
+    "pipeline_p95_ms": 3.0270764998476807,
+    "pipeline_max_ms": 270.7150670003102,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.13561846176912942
+  },
+  {
+    "method": "teb",
+    "scenario": "single_right",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.17668860664749048,
+        "rejoin_s": 35.546887121659374,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.35466705155859124,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.17668860664749048,
+    "command_ticks": 547,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 15.614914999787288,
+    "pipeline_p95_ms": 2.1856731999378094,
+    "pipeline_max_ms": 257.46219700022266,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.12208410668973911
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "single_right",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.650000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.18576403353939547,
+        "rejoin_s": 35.61728740215374,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3644255557836855,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18576403353939547,
+    "command_ticks": 553,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 17.438759000015125,
+    "pipeline_p95_ms": 3.174903000126505,
+    "pipeline_max_ms": 262.32513099967036,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15308351327450936
+  },
+  {
+    "method": "lattice",
+    "scenario": "single_right",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.6,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19391563203891055,
+        "rejoin_s": 35.58417570692106,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3692051514745729,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19391563203891055,
+    "command_ticks": 552,
+    "reached_stop": true,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 6.609673000184557,
+    "pipeline_p95_ms": 2.755567699955463,
+    "pipeline_max_ms": 266.58190900025147,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1489950075390808
+  },
+  {
+    "method": "dwa",
+    "scenario": "single_right",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.726105319753884,
+    "simulated_s": 27.8,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13313482763248802,
+        "rejoin_s": 37.465313436254114,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.35071300295550223,
+        "dwell": 5,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.13313482763248802,
+    "command_ticks": 556,
+    "reached_stop": true,
+    "active_plan_calls": 556,
+    "planning_call_p95_ms": 0.679558999991059,
+    "pipeline_p95_ms": 0.8387107500311686,
+    "pipeline_max_ms": 1.0369389997322287,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.16621040665546652
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_left_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.24621254754531013,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.4458572860514986,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.20972677805541112,
+        "rejoin_s": 38.222551795007476,
+        "first_detection_s": 30.583162799870312,
+        "passing_offset_m": -0.7837633075181317,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.20972677805541112,
+    "command_ticks": 567,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 32.69049750024351,
+    "pipeline_p95_ms": 3.4561067997856294,
+    "pipeline_max_ms": 269.43836200007354,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.18640404087677956
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_left_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.400000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19621458659268648,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.371634936945391,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1849354910295546,
+        "rejoin_s": 38.0632273805189,
+        "first_detection_s": 30.590844926825234,
+        "passing_offset_m": 0.3604059817990643,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1849354910295546,
+    "command_ticks": 568,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 11.383956949794083,
+    "pipeline_p95_ms": 3.4345535000966265,
+    "pipeline_max_ms": 267.5367839997307,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.2594446318050614
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_left_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.723946597897566,
+    "simulated_s": 28.0,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13083140138506583,
+        "rejoin_s": null,
+        "first_detection_s": 27.81693282856691,
+        "passing_offset_m": -0.30715033346060633,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1282387047421119,
+        "rejoin_s": 39.99267612131197,
+        "first_detection_s": 30.621403440422363,
+        "passing_offset_m": 0.33322500998336796,
+        "dwell": 5,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1282387047421119,
+    "command_ticks": 560,
+    "reached_stop": true,
+    "active_plan_calls": 560,
+    "planning_call_p95_ms": 0.6839904500566263,
+    "pipeline_p95_ms": 0.8777696996730809,
+    "pipeline_max_ms": 1.2083300002814212,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17402791237532647
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_left_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.400000000000002,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19326369324780324,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.38482147124182814,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.1514519198023227,
+        "rejoin_s": 38.25503265945858,
+        "first_detection_s": 30.574140283087115,
+        "passing_offset_m": -0.7036234945063955,
+        "dwell": 22,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.1514519198023227,
+    "command_ticks": 548,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 19.160055000156717,
+    "pipeline_p95_ms": 2.6740133999737727,
+    "pipeline_max_ms": 264.9292460000652,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.15298435376485087
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_left_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.05,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.44074257154868396,
+        "rejoin_s": null,
+        "first_detection_s": 27.862840291960016,
+        "passing_offset_m": -0.6222437410015621,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.23844920233020378,
+        "rejoin_s": 38.23386021265275,
+        "first_detection_s": 30.582976690343855,
+        "passing_offset_m": -0.8014383523122233,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.23844920233020378,
+    "command_ticks": 561,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 25.662797100039825,
+    "pipeline_p95_ms": 3.3415039997635176,
+    "pipeline_max_ms": 264.6316800000932,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1746331367601354
+  },
+  {
+    "method": "lattice",
+    "scenario": "stagger_right_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.2032866517408653,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3786412235806774,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.18309241415989747,
+        "rejoin_s": 37.99878196294944,
+        "first_detection_s": 30.593840025400027,
+        "passing_offset_m": -0.3585405671109495,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.18309241415989747,
+    "command_ticks": 569,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 10.894322999865835,
+    "pipeline_p95_ms": 3.3675539998512254,
+    "pipeline_max_ms": 258.99392200017246,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.2627741065762957
+  },
+  {
+    "method": "dwa",
+    "scenario": "stagger_right_first",
+    "seed": 47,
+    "status": "missing_rejoin",
+    "detail": "",
+    "progress_m": 44.728394078442754,
+    "simulated_s": 28.7,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.13313482763248802,
+        "rejoin_s": null,
+        "first_detection_s": 27.899315192401147,
+        "passing_offset_m": 0.3511351133797248,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.13554291060803797,
+        "rejoin_s": null,
+        "first_detection_s": 30.630147393621844,
+        "passing_offset_m": -0.365580623285587,
+        "dwell": 3,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.13313482763248802,
+    "command_ticks": 574,
+    "reached_stop": true,
+    "active_plan_calls": 574,
+    "planning_call_p95_ms": 0.7117633000234491,
+    "pipeline_p95_ms": 0.9549484500439576,
+    "pipeline_max_ms": 1.4763120002498908,
+    "deadline_misses": 0,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.19965126390208593
+  },
+  {
+    "method": "hybrid_astar",
+    "scenario": "stagger_right_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 28.35,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.20274485403308445,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": 0.3838360510734885,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.14802229188544852,
+        "rejoin_s": 38.18617590877136,
+        "first_detection_s": 30.596494192304913,
+        "passing_offset_m": 0.7064781171418615,
+        "dwell": 25,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.14802229188544852,
+    "command_ticks": 567,
+    "reached_stop": true,
+    "active_plan_calls": 2,
+    "planning_call_p95_ms": 24.860113250088034,
+    "pipeline_p95_ms": 3.4440666999671516,
+    "pipeline_max_ms": 262.35365399998045,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.1968068894072388
+  },
+  {
+    "method": "teb",
+    "scenario": "stagger_right_first",
+    "seed": 47,
+    "status": "passed",
+    "detail": "",
+    "progress_m": 44.73153929638099,
+    "simulated_s": 27.45,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 0.19929802854853323,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": -0.7374709023608191,
+        "dwell": 0,
+        "passed_station": true,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 0.2590467472527859,
+        "rejoin_s": 38.050650935499675,
+        "first_detection_s": 30.605151944867693,
+        "passing_offset_m": -0.4505357889389274,
+        "dwell": 24,
+        "passed_station": true,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 0.19929802854853323,
+    "command_ticks": 549,
+    "reached_stop": true,
+    "active_plan_calls": 3,
+    "planning_call_p95_ms": 17.90604410002743,
+    "pipeline_p95_ms": 2.956704399912269,
+    "pipeline_max_ms": 276.928768000289,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.17247095516065447
+  },
+  {
+    "method": "rrt_star",
+    "scenario": "stagger_right_first",
+    "seed": 47,
+    "status": "controller_rejection",
+    "detail": "joint_mpc_solver_4",
+    "progress_m": 30.585282000560802,
+    "simulated_s": 18.1,
+    "encounters": [
+      {
+        "name": "S1",
+        "center": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "radius": 0.2,
+        "station": 33.5,
+        "minimum": 2.4152988091155985,
+        "rejoin_s": null,
+        "first_detection_s": 27.945229066611653,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": false
+      },
+      {
+        "name": "S2",
+        "center": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "radius": 0.2,
+        "station": 36.0,
+        "minimum": 4.909314123679857,
+        "rejoin_s": null,
+        "first_detection_s": null,
+        "passing_offset_m": null,
+        "dwell": 0,
+        "passed_station": false,
+        "rejoin_required": true
+      }
+    ],
+    "min_body_gap_m": 2.4152988091155985,
+    "command_ticks": 362,
+    "reached_stop": false,
+    "active_plan_calls": 1,
+    "planning_call_p95_ms": 21.1748700003227,
+    "pipeline_p95_ms": 2.395827200280109,
+    "pipeline_max_ms": 279.1440750002039,
+    "deadline_misses": 1,
+    "collision": false,
+    "boundary": false,
+    "steer_rate_rms_rad_s": 0.11063611977552937
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "method": "nmpc",
+  "case": "center",
+  "seed": 11,
+  "status": "time_limit",
+  "detail": "",
+  "simulated_s": 55.0,
+  "progress_m": 44.51702637315347,
+  "collision": false,
+  "boundary": false,
+  "final_speed_mps": 3.673748104823874e-266,
+  "failed_call_ms": null,
+  "final_distance_m": 0.21482629198660724,
+  "cte_rmse_cm": 1.5494431030946594,
+  "cte_p95_cm": 2.0099383134028854,
+  "heading_rmse_deg": 2.677620259271775,
+  "speed_rmse_mps": 0.4260783518523009,
+  "steer_rate_rms_rad_s": 0.11541838814237891,
+  "compute_p95_ms": 1.1628199494225555,
+  "call_p95_ms": 1.4229769492885678,
+  "over_budget_steps": 0,
+  "samples": 1100
+}

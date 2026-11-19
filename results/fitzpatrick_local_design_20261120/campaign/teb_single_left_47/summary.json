@@ -1,0 +1,38 @@
+{
+  "method": "teb",
+  "scenario": "single_left",
+  "seed": 47,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.73153929638099,
+  "simulated_s": 27.35,
+  "encounters": [
+    {
+      "name": "S1",
+      "center": [
+        -0.9922115060661181,
+        9.778916837952172
+      ],
+      "radius": 0.2,
+      "station": 33.5,
+      "minimum": 0.18421170848748963,
+      "rejoin_s": 35.41968463260079,
+      "first_detection_s": 27.862840291960016,
+      "passing_offset_m": -0.3656501053882694,
+      "dwell": 25,
+      "passed_station": true,
+      "rejoin_required": true
+    }
+  ],
+  "min_body_gap_m": 0.18421170848748963,
+  "command_ticks": 547,
+  "reached_stop": true,
+  "active_plan_calls": 1,
+  "planning_call_p95_ms": 16.6757389997656,
+  "pipeline_p95_ms": 2.1701189001305456,
+  "pipeline_max_ms": 280.4149530002178,
+  "deadline_misses": 1,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.11911246591119787
+}

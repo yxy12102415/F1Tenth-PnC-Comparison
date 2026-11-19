@@ -1,0 +1,5 @@
+method,scenario,trials,passed,status_counts,collisions,boundary_violations,median_success_time_s,min_body_gap_all_m,min_body_gap_success_m,median_max_progress_m,generated_plan_or_dwa_calls,missing_plan_timings,excess_plan_timings,trials_with_plan_p95,median_trial_planning_call_p95_ms,median_trial_all_tick_pipeline_p95_ms,max_pipeline_ms,pipeline_deadline_misses,timed_ticks,median_trial_steer_rate_rms_rad_s
+unmodified_reference,A,1,0,"{""collision"": 1}",1,0,,0.15439107936960667,,5.464534833238455,0,0,0,0,,1.7140397501634654,263.78568099971744,1,82,0.047215428795188856
+unmodified_reference,B,1,0,"{""collision"": 1}",1,0,,0.17422644697524536,,35.50885513650899,0,0,0,0,,1.7447351002601863,258.623126999737,1,412,0.0941821491967489
+unmodified_reference,stagger_left_first,1,0,"{""collision"": 1}",1,0,,0.1815494233962784,,32.84917224769539,0,0,0,0,,1.8206589997134857,265.8202369998435,1,385,0.09507498390583784
+unmodified_reference,stagger_right_first,1,0,"{""collision"": 1}",1,0,,0.1817457194791215,,32.84917224769539,0,0,0,0,,1.9400049999603652,260.207833000095,1,385,0.09507498390583784

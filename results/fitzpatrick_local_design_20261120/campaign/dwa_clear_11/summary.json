@@ -1,0 +1,21 @@
+{
+  "method": "dwa",
+  "scenario": "clear",
+  "seed": 11,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.72966631408746,
+  "simulated_s": 27.35,
+  "encounters": [],
+  "min_body_gap_m": null,
+  "command_ticks": 547,
+  "reached_stop": true,
+  "active_plan_calls": 547,
+  "planning_call_p95_ms": 0.6508612998004536,
+  "pipeline_p95_ms": 0.7870032999562682,
+  "pipeline_max_ms": 0.9515229999124131,
+  "deadline_misses": 0,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.12332979226433265
+}

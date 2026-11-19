@@ -1,0 +1,129 @@
+{
+  "schedule": [
+    [
+      "unmodified_reference",
+      "A",
+      11
+    ],
+    [
+      "unmodified_reference",
+      "B",
+      11
+    ],
+    [
+      "unmodified_reference",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "unmodified_reference",
+      "stagger_right_first",
+      11
+    ]
+  ],
+  "command_dt": 0.05,
+  "physics_dt": 0.01,
+  "timeout_s": 55.0,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "source_sha256": {
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4",
+    "Code/sim_ws/run_fitz_local.sh": "96db3132f5217a2cc63d5a6b5148c0895cee5d2870c00f6186cdf2ee5afaf6de",
+    "Code/sim_ws/tools/fitz_local_paths.py": "7da8e935b9d575db85d3fdd886cf0830a4b14829ff37a7d204c8d08bf094ba2d",
+    "Code/sim_ws/tools/fitz_local_report.py": "b265cf11ab46b6a0974b34b55f832a1270f18230b5a246dd8b3a73d8a2f18a4a",
+    "Code/sim_ws/tools/fitz_local_scene.py": "ad87681707aeec0b81eb3ef0b33738c2f6e88730caf206ff75996ca2ba23f562",
+    "Code/sim_ws/tools/fitz_local_search.py": "e4665039d1f8e57ab172aa13034bfa07097d81a70ed9ab6cc8894edffca3488b",
+    "Code/sim_ws/tools/fitz_local_teb_dwa.py": "19c43e36c0956bd93a0bf2b7d5226309f1bd30f2e4c4b5f8ececc3025fe8079f",
+    "Code/sim_ws/tools/run_fitz_local.py": "112c11d1de129fac120c8d2b180db99315b8c7a9457a8393342d116def834de2",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "23f3318c1e4fa5635e0220c5df7e4a55e0128f58370ffad9aeebd3547f022d0d",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "96eb609cedcf22b3b10f5982d2f096f356aa3a9af7e0b2bbb9e6c6f953f1b0ed",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "dfd1b0a099ce12fbc33f3244dae3152731260a87370a585342932447307ca525",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "dfb279f8687a36482a9ddaa9b0fe5c21ef4f796f23f0fd6d56562b7482f556f7",
+    "real_vehicle/config/Fitzpatrick_two_obstacles_A_B.json": "393f421b1b01e3a84fa8003d950579218b213f4e8e0d9b809bb87e4ec8907282",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_B.png": "cb2f28600b0e38825c71ea250b87b8ca980b2e63b3fc91fb21aba75bb123d5f6",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_B.yaml": "dac7dd4904bf96683981d49cc62032c35472bc023c8d38555b865ae868e4aba2",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_stagger_left_first.yaml": "97f9111c8c468be43a9760de3fda1c41c02290c854e8378e1049b7257771c45a",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_A.png": "a478e2f71983ce62f92a181f40addf4110b6b5d3b7be788729d31c46f5d8a972",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_stagger_left_first.png": "1b4e4af67f5ed9c3fb6f8198b2016c51b82e4121a9c70893e9bbc0a6d3fa3e57",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_stagger_right_first.png": "d9cca96ffcf0e9ee454882547e4c553bf4407b4d4c118102b06edb3db7ad9c11",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_A.yaml": "49dd4753277e806a253be61fac04100e65c2574baf4ff1afc44603bd2d014a5b",
+    "results/fitzpatrick_local_design_20261120/negative_controls/maps/Fitzpatrick_stagger_right_first.yaml": "dacbce980d4cab5c0428b49c8c4d99eac5483878e32ce6d1e0107636a30eec44"
+  },
+  "git": "97bdd9cd0159534065c8439d5acc9284eec134ec",
+  "placements": {
+    "A": [
+      {
+        "name": "A",
+        "center_xy": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "route_distance_m": 5.97609567766336,
+        "desired_diameter_m": 0.1
+      }
+    ],
+    "B": [
+      {
+        "name": "B",
+        "center_xy": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "route_distance_m": 36.003091661015134,
+        "desired_diameter_m": 0.1
+      }
+    ],
+    "stagger_left_first": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "stagger_right_first": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ]
+  },
+  "sensing": "official single-agent Gym scan vs known background, exact simulator ego pose",
+  "rejoin": "after the last obstacle in each group (gap <=3 m), +0.55 to +4 m, within 0.12 m and 0.16 rad for five ticks",
+  "budget_ms": 50.0,
+  "timing": "serial synchronous simulation; deadline misses counted, latency not injected"
+}

@@ -1,0 +1,108 @@
+[
+  {
+    "scenario": "stagger_left_first",
+    "placements": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "sample_spacing_m": 0.001,
+    "start_s_m": 31.0,
+    "end_s_m": 39.0,
+    "geometry_only": true,
+    "paths": {
+      "direct": {
+        "minimum_disc_gap_m": -0.175000000000027,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 5.684341886048568e-10
+      },
+      "alternating": {
+        "minimum_disc_gap_m": 0.20499999999999158,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 0.6506404552825573
+      },
+      "same_side_left": {
+        "minimum_disc_gap_m": 0.19499999999999157,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 0.734374688375175
+      },
+      "same_side_right": {
+        "minimum_disc_gap_m": 0.19499999999995982,
+        "conservative_wall_gap_m": 0.9466162684650179,
+        "maximum_abs_curvature_1pm": 0.7343746884284884
+      }
+    }
+  },
+  {
+    "scenario": "stagger_right_first",
+    "placements": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "sample_spacing_m": 0.001,
+    "start_s_m": 31.0,
+    "end_s_m": 39.0,
+    "geometry_only": true,
+    "paths": {
+      "direct": {
+        "minimum_disc_gap_m": -0.1750000000000202,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 5.684341886048568e-10
+      },
+      "alternating": {
+        "minimum_disc_gap_m": 0.2049999999999917,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 0.6506404552826011
+      },
+      "same_side_left": {
+        "minimum_disc_gap_m": 0.19499999999999157,
+        "conservative_wall_gap_m": 1.0194084746008034,
+        "maximum_abs_curvature_1pm": 0.734374688375175
+      },
+      "same_side_right": {
+        "minimum_disc_gap_m": 0.19499999999996748,
+        "conservative_wall_gap_m": 0.9466162684650179,
+        "maximum_abs_curvature_1pm": 0.7343746884284884
+      }
+    }
+  }
+]

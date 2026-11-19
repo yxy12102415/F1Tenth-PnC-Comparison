@@ -1,0 +1,2 @@
+method,finished,total,collisions,boundary_violations,failures,over_budget_accepted_steps,mean_trial_simulated_s,mean_trial_cte_rmse_cm,mean_trial_speed_rmse_mps,mean_trial_steer_rate_rms_rad_s,mean_trial_compute_p95_ms,mean_trial_call_p95_ms,mean_trial_heading_rmse_deg
+nmpc,1,1,0,0,0,0,27.3,0.8139116645217279,0.048998022565514464,0.10479974341683874,1.4493715000298835,1.8058255001278667,1.556741893206634

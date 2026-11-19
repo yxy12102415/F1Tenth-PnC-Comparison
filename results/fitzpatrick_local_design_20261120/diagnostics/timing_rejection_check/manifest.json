@@ -1,0 +1,74 @@
+{
+  "schedule": [
+    [
+      "rrt_star",
+      "stagger_right_first",
+      11
+    ]
+  ],
+  "command_dt": 0.05,
+  "physics_dt": 0.01,
+  "timeout_s": 55.0,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "packages": {
+    "gym": "0.19.0",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "numba": "0.55.1",
+    "Pillow": "9.0.1"
+  },
+  "source_sha256": {
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.yaml": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.png": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990",
+    "Code/sim_ws/tools/build_fitz_tracking_joint.sh": "cae4e759ca74bccc289ab91d71bbd353891d1714fac1dfd6454eeac35dcb38b8",
+    "Code/sim_ws/tools/generate_takeover_assets.py": "c0d2f984f54a528ca87d7ea62008e9694457873b539f5dd9f93de8e6b360aa04",
+    "Code/sim_ws/run_fitz_local.sh": "96db3132f5217a2cc63d5a6b5148c0895cee5d2870c00f6186cdf2ee5afaf6de",
+    "Code/sim_ws/tools/fitz_local_paths.py": "7da8e935b9d575db85d3fdd886cf0830a4b14829ff37a7d204c8d08bf094ba2d",
+    "Code/sim_ws/tools/fitz_local_report.py": "ba85e3c6a377c5465297aee1aec5c9329054bb569267034acbd9dc806c675793",
+    "Code/sim_ws/tools/fitz_local_scene.py": "6c9a4981d0d3a6ce76a25b39ac8589d09026d86562f9397912d5afc1feb4e96f",
+    "Code/sim_ws/tools/fitz_local_search.py": "e4665039d1f8e57ab172aa13034bfa07097d81a70ed9ab6cc8894edffca3488b",
+    "Code/sim_ws/tools/fitz_local_teb_dwa.py": "035383bab5218b70372d17f5e6aa53a51d94b134f415b6deafd646e8ba2f34f0",
+    "Code/sim_ws/tools/run_fitz_local.py": "d453f3b3b2e06b4eefa2088633230d9e4f66c62af444dcef522118de70b681c7",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "23f3318c1e4fa5635e0220c5df7e4a55e0128f58370ffad9aeebd3547f022d0d",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "96eb609cedcf22b3b10f5982d2f096f356aa3a9af7e0b2bbb9e6c6f953f1b0ed",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "dfd1b0a099ce12fbc33f3244dae3152731260a87370a585342932447307ca525",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "dfb279f8687a36482a9ddaa9b0fe5c21ef4f796f23f0fd6d56562b7482f556f7",
+    "real_vehicle/config/Fitzpatrick_two_obstacles_A_B.json": "393f421b1b01e3a84fa8003d950579218b213f4e8e0d9b809bb87e4ec8907282",
+    "results/fitzpatrick_local_design_20261120/diagnostics/timing_rejection_check/maps/Fitzpatrick_stagger_right_first.png": "d9cca96ffcf0e9ee454882547e4c553bf4407b4d4c118102b06edb3db7ad9c11",
+    "results/fitzpatrick_local_design_20261120/diagnostics/timing_rejection_check/maps/Fitzpatrick_stagger_right_first.yaml": "dacbce980d4cab5c0428b49c8c4d99eac5483878e32ce6d1e0107636a30eec44"
+  },
+  "git": "97bdd9cd0159534065c8439d5acc9284eec134ec",
+  "placements": {
+    "stagger_right_first": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ]
+  },
+  "sensing": "official single-agent Gym scan vs known background, exact simulator ego pose",
+  "rejoin": "after the last obstacle in each group (gap <=3 m), +0.55 to +4 m, within 0.12 m and 0.16 rad for five ticks",
+  "budget_ms": 50.0,
+  "timing": "serial synchronous simulation; deadline misses counted, latency not injected"
+}

@@ -1,0 +1,38 @@
+{
+  "method": "lattice",
+  "scenario": "A",
+  "seed": 11,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.73153929638099,
+  "simulated_s": 27.650000000000002,
+  "encounters": [
+    {
+      "name": "A",
+      "center": [
+        6.022211142155291,
+        1.8324089029725348
+      ],
+      "radius": 0.05,
+      "station": 5.97609567766336,
+      "minimum": 0.2885590516440922,
+      "rejoin_s": 8.189854942852605,
+      "first_detection_s": 0.6307374241943262,
+      "passing_offset_m": 0.4969841497091543,
+      "dwell": 24,
+      "passed_station": true,
+      "rejoin_required": true
+    }
+  ],
+  "min_body_gap_m": 0.2885590516440922,
+  "command_ticks": 553,
+  "reached_stop": true,
+  "active_plan_calls": 1,
+  "planning_call_p95_ms": 6.738669000242226,
+  "pipeline_p95_ms": 2.546202200028346,
+  "pipeline_max_ms": 268.2424150002589,
+  "deadline_misses": 1,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.17777908346447713
+}

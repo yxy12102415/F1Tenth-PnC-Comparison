@@ -1,0 +1,73 @@
+{
+  "route_length_m": 44.73153929638099,
+  "control_dt_s": 0.05,
+  "physics_dt_s": 0.01,
+  "method_order": [
+    [
+      "nmpc",
+      "center",
+      11
+    ],
+    [
+      "mppi",
+      "center",
+      11
+    ]
+  ],
+  "cases_offset_m_heading_deg": {
+    "center": [
+      0.0,
+      0.0
+    ],
+    "left": [
+      0.1,
+      4.0
+    ],
+    "right": [
+      -0.1,
+      -4.0
+    ]
+  },
+  "params": {
+    "dt": 0.05,
+    "wheelbase": 0.3302,
+    "max_speed": 2.0,
+    "max_accel": 3.0,
+    "max_decel": 3.0,
+    "max_steer": 0.4189,
+    "max_steer_rate": 0.8
+  },
+  "end": {
+    "remaining_m": 0.15,
+    "distance_m": 0.2,
+    "yaw_rad": 0.18,
+    "speed_mps": 0.1,
+    "dwell_s": 0.5
+  },
+  "sim_timeout_s": 55.0,
+  "measured_budget_ms": 45.0,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "commit": "97bdd9cd0159534065c8439d5acc9284eec134ec",
+  "versions": {
+    "gym": "0.19.0",
+    "f110-gym": "0.2.1",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "osqp": "0.6.3"
+  },
+  "sha256": {
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.png": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.yaml": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8",
+    "Code/sim_ws/tools/build_fitz_tracking_joint.sh": "423efe3d6a511cf3ccaa3b6e6cd1f709088b402f650bde4de7e2b464a25e8e79",
+    "Code/sim_ws/tools/fitz_tracking_classic.py": "87ba4b8dfc97ee83c25c6ea4aed5e85557c4f0e7044b9c7aaa22a6d96a02460e",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "7c1c1c6c0f6bf361ef8b5008fcf3764075accba1827baf0c94bf2b16d88de930",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "d0a49b70eba7f29717c5727784840646258f9709ad3b24884c8807fe65f6e2ca",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "6e4d1bd311116544f94dd9fcf051694dadfabfb1fd7ea1b75f9f837544608809",
+    "Code/sim_ws/src/takeover_sim/include/takeover_sim/mppi_control.hpp": "8f5044d3c388aa02f55437cd13fbbc71f249fc860049d8544427f1a7e0dd164c",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/generate_joint_solver.py": "b3390fa120fc51232a5ed46fa1de0d4c2aef9bf7b973c0fe70a99e30a70356e2",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "609730fc1cad7610da6c967a4c6b495c7e4d2f9a13b5abdb568359e9fc4d3c76"
+  }
+}

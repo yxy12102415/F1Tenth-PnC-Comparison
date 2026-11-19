@@ -1,0 +1,38 @@
+{
+  "method": "dwa",
+  "scenario": "A",
+  "seed": 11,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.72841143089554,
+  "simulated_s": 27.75,
+  "encounters": [
+    {
+      "name": "A",
+      "center": [
+        6.022211142155291,
+        1.8324089029725348
+      ],
+      "radius": 0.05,
+      "station": 5.97609567766336,
+      "minimum": 0.0856624493467021,
+      "rejoin_s": 8.920835181562039,
+      "first_detection_s": 0.605004756496006,
+      "passing_offset_m": -0.2956004680249022,
+      "dwell": 16,
+      "passed_station": true,
+      "rejoin_required": true
+    }
+  ],
+  "min_body_gap_m": 0.0856624493467021,
+  "command_ticks": 555,
+  "reached_stop": true,
+  "active_plan_calls": 555,
+  "planning_call_p95_ms": 0.6955667000056565,
+  "pipeline_p95_ms": 0.8708275000117282,
+  "pipeline_max_ms": 1.0798220000651781,
+  "deadline_misses": 0,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.154219920191212
+}

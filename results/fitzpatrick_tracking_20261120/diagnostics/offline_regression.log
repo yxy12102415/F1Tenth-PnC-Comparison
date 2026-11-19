@@ -1,0 +1,37 @@
+Candidate scoring and footprint regression checks passed
+Adaptive shifted-target candidate: ok offset=1.22
+Cancel initial curvature 0.189752 transition 2.6
+Fitz restart ok curvature 0.357206
+Prediction, timing, longitudinal lag, cancellation and stale-target regressions passed
+MPPI rollout matches generated native-Gym MPC dynamics: 200 states x 10 components
+MPPI seeded update, dynamics, preview isolation, bounds, map/body/expiry guards passed
+Checked execution rolls back rejected state; cold retry cannot bypass map/body/expiry checks
+Non-actuating MPC preview preserves the live controller state
+Checked execution rolls back rejected state; cold retry cannot bypass map/body/expiry checks
+Non-actuating MPC preview preserves the live controller state
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+OK
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.008s
+
+OK
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.321s
+
+OK
+Late/fragmented SQP result discarded; fresh solve recovered
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.063s
+
+OK

@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "physics_dt": 0.01,
+  "tolerance": 1e-07,
+  "validation_scope": "deterministic replay of executed commands only",
+  "trials": [
+    {
+      "method": "unmodified_reference",
+      "scenario": "A",
+      "seed": 11,
+      "recorded_status": "collision",
+      "commands": 82,
+      "physics_samples": 408,
+      "trace_sha256": "2a8251b3a8935357d48bd68289c011356f050826bb12e8dcb6dc0d1db57cfd67",
+      "summary_sha256": "27d4cbd4bbb105ea5094f5a514068f8ab0ec80e4f1fea03a9d8a7a0fbd82b426",
+      "max_position_error_m": 0.0,
+      "max_yaw_error_rad": 0.0,
+      "max_speed_error_mps": 0.0,
+      "max_timestamp_error_s": 0.0,
+      "flag_mismatches": 0,
+      "per_obstacle_min_body_gap_m": {
+        "A": 0.15439107936960667
+      },
+      "min_body_gap_m": 0.15439107936960667,
+      "collision": true,
+      "boundary": false,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "method": "unmodified_reference",
+      "scenario": "B",
+      "seed": 11,
+      "recorded_status": "collision",
+      "commands": 412,
+      "physics_samples": 2057,
+      "trace_sha256": "97a83bad8eed07e031d909a16cb245d3fe71ce3143b14b9c1f7d4d92d7047aeb",
+      "summary_sha256": "9a9ebfbad774dacec33b263f1f138102219090b93324011105274d7d8fe61ae0",
+      "max_position_error_m": 0.0,
+      "max_yaw_error_rad": 0.0,
+      "max_speed_error_mps": 0.0,
+      "max_timestamp_error_s": 0.0,
+      "flag_mismatches": 0,
+      "per_obstacle_min_body_gap_m": {
+        "B": 0.17422644697524536
+      },
+      "min_body_gap_m": 0.17422644697524536,
+      "collision": true,
+      "boundary": false,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "method": "unmodified_reference",
+      "scenario": "stagger_left_first",
+      "seed": 11,
+      "recorded_status": "collision",
+      "commands": 385,
+      "physics_samples": 1924,
+      "trace_sha256": "4a994a1f57b27929eca7996ed0a07ac88e06dcb2abd70de689e0c4c45dc98206",
+      "summary_sha256": "070e81a905cbfa6afe0cc556417cb59adab5c1d26bbd8efb12b14c276f2ffb1a",
+      "max_position_error_m": 0.0,
+      "max_yaw_error_rad": 0.0,
+      "max_speed_error_mps": 0.0,
+      "max_timestamp_error_s": 0.0,
+      "flag_mismatches": 0,
+      "per_obstacle_min_body_gap_m": {
+        "S1": 0.1815494233962784,
+        "S2": 2.6808922478402577
+      },
+      "min_body_gap_m": 0.1815494233962784,
+      "collision": true,
+      "boundary": false,
+      "valid": true,
+      "errors": []
+    },
+    {
+      "method": "unmodified_reference",
+      "scenario": "stagger_right_first",
+      "seed": 11,
+      "recorded_status": "collision",
+      "commands": 385,
+      "physics_samples": 1924,
+      "trace_sha256": "9e01e7682ab05b09e4a3c6c53653e76c546c87e8b6e4056cef5f3565beeb866f",
+      "summary_sha256": "9cacb858d6a9d470fa02c8e1ed19a7e7f3e225fe116f8bcb0c4d5961eb967496",
+      "max_position_error_m": 0.0,
+      "max_yaw_error_rad": 0.0,
+      "max_speed_error_mps": 0.0,
+      "max_timestamp_error_s": 0.0,
+      "flag_mismatches": 0,
+      "per_obstacle_min_body_gap_m": {
+        "S1": 0.1817457194791215,
+        "S2": 2.680967479418828
+      },
+      "min_body_gap_m": 0.1817457194791215,
+      "collision": true,
+      "boundary": false,
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "errors": [],
+  "manifest_sha256": "34c26b9067f124df15cba2e7a3785fd5e750c0bb80e4922d0cb434a1802320d5",
+  "trials_sha256": "8441d4f645ef92b62d167343f0813aefe9387ea0e5e80768a5a44ceb9b358871",
+  "scheduled_trials": 4,
+  "base_assets_missing_from_original_manifest": [
+    {
+      "file": "Fitzpatrick_sim.png",
+      "replay_sha256": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990"
+    },
+    {
+      "file": "Fitzpatrick_sim.yaml",
+      "replay_sha256": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8"
+    }
+  ],
+  "checked_trials": 4,
+  "physics_samples": 6313,
+  "valid": true
+}

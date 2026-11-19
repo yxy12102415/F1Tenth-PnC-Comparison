@@ -1,0 +1,776 @@
+{
+  "schedule": [
+    [
+      "lattice",
+      "clear",
+      11
+    ],
+    [
+      "rrt_star",
+      "clear",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "clear",
+      11
+    ],
+    [
+      "teb",
+      "clear",
+      11
+    ],
+    [
+      "dwa",
+      "clear",
+      11
+    ],
+    [
+      "lattice",
+      "A",
+      11
+    ],
+    [
+      "teb",
+      "A",
+      11
+    ],
+    [
+      "rrt_star",
+      "A",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "A",
+      11
+    ],
+    [
+      "dwa",
+      "A",
+      11
+    ],
+    [
+      "teb",
+      "B",
+      11
+    ],
+    [
+      "dwa",
+      "B",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "B",
+      11
+    ],
+    [
+      "lattice",
+      "B",
+      11
+    ],
+    [
+      "rrt_star",
+      "B",
+      11
+    ],
+    [
+      "lattice",
+      "AB",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "AB",
+      11
+    ],
+    [
+      "rrt_star",
+      "AB",
+      11
+    ],
+    [
+      "dwa",
+      "AB",
+      11
+    ],
+    [
+      "teb",
+      "AB",
+      11
+    ],
+    [
+      "dwa",
+      "single_left",
+      11
+    ],
+    [
+      "teb",
+      "single_left",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "single_left",
+      11
+    ],
+    [
+      "lattice",
+      "single_left",
+      11
+    ],
+    [
+      "rrt_star",
+      "single_left",
+      11
+    ],
+    [
+      "lattice",
+      "single_right",
+      11
+    ],
+    [
+      "teb",
+      "single_right",
+      11
+    ],
+    [
+      "dwa",
+      "single_right",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "single_right",
+      11
+    ],
+    [
+      "rrt_star",
+      "single_right",
+      11
+    ],
+    [
+      "teb",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "lattice",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "rrt_star",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "dwa",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "stagger_left_first",
+      11
+    ],
+    [
+      "hybrid_astar",
+      "stagger_right_first",
+      11
+    ],
+    [
+      "teb",
+      "stagger_right_first",
+      11
+    ],
+    [
+      "dwa",
+      "stagger_right_first",
+      11
+    ],
+    [
+      "lattice",
+      "stagger_right_first",
+      11
+    ],
+    [
+      "rrt_star",
+      "stagger_right_first",
+      11
+    ],
+    [
+      "lattice",
+      "clear",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "clear",
+      29
+    ],
+    [
+      "rrt_star",
+      "clear",
+      29
+    ],
+    [
+      "dwa",
+      "clear",
+      29
+    ],
+    [
+      "teb",
+      "clear",
+      29
+    ],
+    [
+      "lattice",
+      "A",
+      29
+    ],
+    [
+      "teb",
+      "A",
+      29
+    ],
+    [
+      "rrt_star",
+      "A",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "A",
+      29
+    ],
+    [
+      "dwa",
+      "A",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "B",
+      29
+    ],
+    [
+      "lattice",
+      "B",
+      29
+    ],
+    [
+      "dwa",
+      "B",
+      29
+    ],
+    [
+      "rrt_star",
+      "B",
+      29
+    ],
+    [
+      "teb",
+      "B",
+      29
+    ],
+    [
+      "lattice",
+      "AB",
+      29
+    ],
+    [
+      "teb",
+      "AB",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "AB",
+      29
+    ],
+    [
+      "rrt_star",
+      "AB",
+      29
+    ],
+    [
+      "dwa",
+      "AB",
+      29
+    ],
+    [
+      "teb",
+      "single_left",
+      29
+    ],
+    [
+      "lattice",
+      "single_left",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "single_left",
+      29
+    ],
+    [
+      "dwa",
+      "single_left",
+      29
+    ],
+    [
+      "rrt_star",
+      "single_left",
+      29
+    ],
+    [
+      "lattice",
+      "single_right",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "single_right",
+      29
+    ],
+    [
+      "dwa",
+      "single_right",
+      29
+    ],
+    [
+      "rrt_star",
+      "single_right",
+      29
+    ],
+    [
+      "teb",
+      "single_right",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "stagger_left_first",
+      29
+    ],
+    [
+      "rrt_star",
+      "stagger_left_first",
+      29
+    ],
+    [
+      "teb",
+      "stagger_left_first",
+      29
+    ],
+    [
+      "lattice",
+      "stagger_left_first",
+      29
+    ],
+    [
+      "dwa",
+      "stagger_left_first",
+      29
+    ],
+    [
+      "hybrid_astar",
+      "stagger_right_first",
+      29
+    ],
+    [
+      "teb",
+      "stagger_right_first",
+      29
+    ],
+    [
+      "rrt_star",
+      "stagger_right_first",
+      29
+    ],
+    [
+      "lattice",
+      "stagger_right_first",
+      29
+    ],
+    [
+      "dwa",
+      "stagger_right_first",
+      29
+    ],
+    [
+      "rrt_star",
+      "clear",
+      47
+    ],
+    [
+      "dwa",
+      "clear",
+      47
+    ],
+    [
+      "lattice",
+      "clear",
+      47
+    ],
+    [
+      "teb",
+      "clear",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "clear",
+      47
+    ],
+    [
+      "dwa",
+      "A",
+      47
+    ],
+    [
+      "lattice",
+      "A",
+      47
+    ],
+    [
+      "teb",
+      "A",
+      47
+    ],
+    [
+      "rrt_star",
+      "A",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "A",
+      47
+    ],
+    [
+      "rrt_star",
+      "B",
+      47
+    ],
+    [
+      "teb",
+      "B",
+      47
+    ],
+    [
+      "lattice",
+      "B",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "B",
+      47
+    ],
+    [
+      "dwa",
+      "B",
+      47
+    ],
+    [
+      "lattice",
+      "AB",
+      47
+    ],
+    [
+      "rrt_star",
+      "AB",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "AB",
+      47
+    ],
+    [
+      "dwa",
+      "AB",
+      47
+    ],
+    [
+      "teb",
+      "AB",
+      47
+    ],
+    [
+      "teb",
+      "single_left",
+      47
+    ],
+    [
+      "rrt_star",
+      "single_left",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "single_left",
+      47
+    ],
+    [
+      "lattice",
+      "single_left",
+      47
+    ],
+    [
+      "dwa",
+      "single_left",
+      47
+    ],
+    [
+      "rrt_star",
+      "single_right",
+      47
+    ],
+    [
+      "teb",
+      "single_right",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "single_right",
+      47
+    ],
+    [
+      "lattice",
+      "single_right",
+      47
+    ],
+    [
+      "dwa",
+      "single_right",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "stagger_left_first",
+      47
+    ],
+    [
+      "lattice",
+      "stagger_left_first",
+      47
+    ],
+    [
+      "dwa",
+      "stagger_left_first",
+      47
+    ],
+    [
+      "teb",
+      "stagger_left_first",
+      47
+    ],
+    [
+      "rrt_star",
+      "stagger_left_first",
+      47
+    ],
+    [
+      "lattice",
+      "stagger_right_first",
+      47
+    ],
+    [
+      "dwa",
+      "stagger_right_first",
+      47
+    ],
+    [
+      "hybrid_astar",
+      "stagger_right_first",
+      47
+    ],
+    [
+      "teb",
+      "stagger_right_first",
+      47
+    ],
+    [
+      "rrt_star",
+      "stagger_right_first",
+      47
+    ]
+  ],
+  "command_dt": 0.05,
+  "physics_dt": 0.01,
+  "timeout_s": 55.0,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "packages": {
+    "gym": "0.19.0",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "numba": "0.55.1",
+    "Pillow": "9.0.1"
+  },
+  "source_sha256": {
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.yaml": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.png": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990",
+    "Code/sim_ws/tools/build_fitz_tracking_joint.sh": "cae4e759ca74bccc289ab91d71bbd353891d1714fac1dfd6454eeac35dcb38b8",
+    "Code/sim_ws/tools/generate_takeover_assets.py": "c0d2f984f54a528ca87d7ea62008e9694457873b539f5dd9f93de8e6b360aa04",
+    "Code/sim_ws/run_fitz_local.sh": "96db3132f5217a2cc63d5a6b5148c0895cee5d2870c00f6186cdf2ee5afaf6de",
+    "Code/sim_ws/tools/fitz_local_paths.py": "7da8e935b9d575db85d3fdd886cf0830a4b14829ff37a7d204c8d08bf094ba2d",
+    "Code/sim_ws/tools/fitz_local_report.py": "f502a1cc2697ff1bde4583e88fa33e40100c5b1db749a149f280f39d781834ba",
+    "Code/sim_ws/tools/fitz_local_scene.py": "6c9a4981d0d3a6ce76a25b39ac8589d09026d86562f9397912d5afc1feb4e96f",
+    "Code/sim_ws/tools/fitz_local_search.py": "e4665039d1f8e57ab172aa13034bfa07097d81a70ed9ab6cc8894edffca3488b",
+    "Code/sim_ws/tools/fitz_local_teb_dwa.py": "035383bab5218b70372d17f5e6aa53a51d94b134f415b6deafd646e8ba2f34f0",
+    "Code/sim_ws/tools/run_fitz_local.py": "f1e2e79f9b3144684239e5e8a5e6b1060fde9eec604ef27635104498dae008d9",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "23f3318c1e4fa5635e0220c5df7e4a55e0128f58370ffad9aeebd3547f022d0d",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "96eb609cedcf22b3b10f5982d2f096f356aa3a9af7e0b2bbb9e6c6f953f1b0ed",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "dfd1b0a099ce12fbc33f3244dae3152731260a87370a585342932447307ca525",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "dfb279f8687a36482a9ddaa9b0fe5c21ef4f796f23f0fd6d56562b7482f556f7",
+    "real_vehicle/config/Fitzpatrick_two_obstacles_A_B.json": "393f421b1b01e3a84fa8003d950579218b213f4e8e0d9b809bb87e4ec8907282",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_AB.png": "e586e4c4877b30e395c5455558c650fa03263c769c1c79765b0385b394a581b3",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_single_left.yaml": "ca3824cb0322c0878f9b835342f1bca3e165506cb5497ae593208279add45fc4",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_B.png": "cb2f28600b0e38825c71ea250b87b8ca980b2e63b3fc91fb21aba75bb123d5f6",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_AB.yaml": "56a5ed1c2fec42c500f766b7b1c5f7463e5ffd0374cbba591c4dd757aa5cfbf1",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_single_right.yaml": "5dd898fcf20465e3137ffa0e423a56a080fddc81b50d2f3b12f447e5f8beb10b",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_clear.png": "00ff13f0a3f8186b8993348a8ad767df49dee7153b264a09cfcf1f5f12545612",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_B.yaml": "dac7dd4904bf96683981d49cc62032c35472bc023c8d38555b865ae868e4aba2",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_stagger_left_first.yaml": "97f9111c8c468be43a9760de3fda1c41c02290c854e8378e1049b7257771c45a",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_clear.yaml": "9cb0bba2e2cf0d7f6c547799cfc4fdb255614038caadf3f0863d2effac1fd45d",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_A.png": "a478e2f71983ce62f92a181f40addf4110b6b5d3b7be788729d31c46f5d8a972",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_stagger_left_first.png": "1b4e4af67f5ed9c3fb6f8198b2016c51b82e4121a9c70893e9bbc0a6d3fa3e57",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_single_right.png": "0eac3872a888aa9c8eef6e80693cece31778dacc8dd770c70926065ec54860fc",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_stagger_right_first.png": "d9cca96ffcf0e9ee454882547e4c553bf4407b4d4c118102b06edb3db7ad9c11",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_A.yaml": "49dd4753277e806a253be61fac04100e65c2574baf4ff1afc44603bd2d014a5b",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_stagger_right_first.yaml": "dacbce980d4cab5c0428b49c8c4d99eac5483878e32ce6d1e0107636a30eec44",
+    "results/fitzpatrick_local_design_20261120/campaign/maps/Fitzpatrick_single_left.png": "06f38a7120232475b9ba940adea61aa4f49163b05ea1ca3f7772a42b8156c1da"
+  },
+  "git": "97bdd9cd0159534065c8439d5acc9284eec134ec",
+  "placements": {
+    "clear": [],
+    "A": [
+      {
+        "name": "A",
+        "center_xy": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "route_distance_m": 5.97609567766336,
+        "desired_diameter_m": 0.1
+      }
+    ],
+    "B": [
+      {
+        "name": "B",
+        "center_xy": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "route_distance_m": 36.003091661015134,
+        "desired_diameter_m": 0.1
+      }
+    ],
+    "AB": [
+      {
+        "name": "A",
+        "center_xy": [
+          6.022211142155291,
+          1.8324089029725348
+        ],
+        "route_distance_m": 5.97609567766336,
+        "desired_diameter_m": 0.1
+      },
+      {
+        "name": "B",
+        "center_xy": [
+          -1.1722115060661185,
+          7.275825176937007
+        ],
+        "route_distance_m": 36.003091661015134,
+        "desired_diameter_m": 0.1
+      }
+    ],
+    "single_left": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "single_right": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "stagger_left_first": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -0.9922115060661181,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -1.3522115060661184,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ],
+    "stagger_right_first": [
+      {
+        "name": "S1",
+        "center_xy": [
+          -1.352211506066118,
+          9.778916837952172
+        ],
+        "route_distance_m": 33.5,
+        "lateral_offset_m": -0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      },
+      {
+        "name": "S2",
+        "center_xy": [
+          -0.9922115060661185,
+          7.27891683795214
+        ],
+        "route_distance_m": 36.0,
+        "lateral_offset_m": 0.18,
+        "desired_diameter_m": 0.4,
+        "source": "designed_simulation_fixture"
+      }
+    ]
+  },
+  "sensing": "official single-agent Gym scan vs known background, exact simulator ego pose",
+  "rejoin": "after the last obstacle in each group (gap <=3 m), +0.55 to +4 m, within 0.12 m and 0.16 rad for five ticks",
+  "budget_ms": 50.0,
+  "timing": "serial synchronous simulation; deadline misses counted, latency not injected"
+}

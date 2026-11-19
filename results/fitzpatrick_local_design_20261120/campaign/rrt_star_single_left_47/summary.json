@@ -1,0 +1,38 @@
+{
+  "method": "rrt_star",
+  "scenario": "single_left",
+  "seed": 47,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.73153929638099,
+  "simulated_s": 27.55,
+  "encounters": [
+    {
+      "name": "S1",
+      "center": [
+        -0.9922115060661181,
+        9.778916837952172
+      ],
+      "radius": 0.2,
+      "station": 33.5,
+      "minimum": 0.23988102730839972,
+      "rejoin_s": 35.53825410763281,
+      "first_detection_s": 27.862840291960016,
+      "passing_offset_m": -0.431402707603597,
+      "dwell": 25,
+      "passed_station": true,
+      "rejoin_required": true
+    }
+  ],
+  "min_body_gap_m": 0.23988102730839972,
+  "command_ticks": 551,
+  "reached_stop": true,
+  "active_plan_calls": 1,
+  "planning_call_p95_ms": 20.542381999803183,
+  "pipeline_p95_ms": 3.3686715000840195,
+  "pipeline_max_ms": 279.4985609998548,
+  "deadline_misses": 1,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.1360089172934465
+}

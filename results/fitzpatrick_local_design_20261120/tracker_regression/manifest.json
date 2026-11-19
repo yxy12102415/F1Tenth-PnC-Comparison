@@ -1,0 +1,80 @@
+{
+  "route_length_m": 44.73153929638099,
+  "control_dt_s": 0.05,
+  "physics_dt_s": 0.01,
+  "method_order": [
+    [
+      "nmpc",
+      "center",
+      11
+    ]
+  ],
+  "cases_offset_m_heading_deg": {
+    "center": [
+      0.0,
+      0.0
+    ],
+    "left": [
+      0.1,
+      4.0
+    ],
+    "right": [
+      -0.1,
+      -4.0
+    ]
+  },
+  "params": {
+    "dt": 0.05,
+    "wheelbase": 0.3302,
+    "max_speed": 2.0,
+    "max_accel": 3.0,
+    "max_decel": 3.0,
+    "max_steer": 0.4189,
+    "max_steer_rate": 0.8,
+    "max_accel_step": 0.15
+  },
+  "end": {
+    "remaining_m": 0.15,
+    "distance_m": 0.2,
+    "yaw_rad": 0.18,
+    "speed_mps": 0.1,
+    "dwell_s": 0.5
+  },
+  "gym_git": "4fdb9c7e6fb7c701290f4dc18377d07c1681724f",
+  "gym_env_file": "f110_gym",
+  "observer": "Gym pose and longitudinal speed / yaw rate",
+  "reference_policy": "project current position onto unwrapped arc; read shared 25-stage reference; stopped finish",
+  "noise": "no injected pose noise; nominal classic and NMPC runs are deterministic by design",
+  "sim_timeout_s": 55.0,
+  "measured_budget_ms": 45.0,
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "commit": "97bdd9cd0159534065c8439d5acc9284eec134ec",
+  "versions": {
+    "gym": "0.19.0",
+    "f110-gym": "0.2.1",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "osqp": "0.6.3"
+  },
+  "sha256": {
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4",
+    "Code/sim_ws/run_fitz_tracking.sh": "80a2e0b5d970d3823051a56f6cdc526f7d6f6d0b926e2d595a79c55a14831f8d",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/core.hpp": "2f7755c9fd5552e710b64acd2de5979986abd8044b21653e86dc7f9f16c2ec8c",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/joint_control.hpp": "d2a743acfbe97e445eb9c3e69918bbf1a4543b838c4446aa10ab0abf5caeb8cf",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/perception.hpp": "4fdcc06b34a2d376374be714fb74d0a67016352e2b1ea3f5eeb20c7a82b4370a",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/tracker.hpp": "3765fd72f1771e3d48ef88a09d23b19dd713fcdfc37e01da8a5af6192050b4be",
+    "Code/sim_ws/src/takeover_sim/include/takeover_sim/dynamic_overtaking.hpp": "73d9e0ae4a0c5bc39dd3c47b1b2367358a3aa74d3afa07867d98eeaca77c8eed",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.png": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.yaml": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8",
+    "Code/sim_ws/tools/build_fitz_tracking_joint.sh": "cae4e759ca74bccc289ab91d71bbd353891d1714fac1dfd6454eeac35dcb38b8",
+    "Code/sim_ws/tools/fitz_tracking_classic.py": "87ba4b8dfc97ee83c25c6ea4aed5e85557c4f0e7044b9c7aaa22a6d96a02460e",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "dfd1b0a099ce12fbc33f3244dae3152731260a87370a585342932447307ca525",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "23f3318c1e4fa5635e0220c5df7e4a55e0128f58370ffad9aeebd3547f022d0d",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "96eb609cedcf22b3b10f5982d2f096f356aa3a9af7e0b2bbb9e6c6f953f1b0ed",
+    "Code/sim_ws/src/takeover_sim/include/takeover_sim/mppi_control.hpp": "8f5044d3c388aa02f55437cd13fbbc71f249fc860049d8544427f1a7e0dd164c",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/generate_joint_solver.py": "b3390fa120fc51232a5ed46fa1de0d4c2aef9bf7b973c0fe70a99e30a70356e2",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "dfb279f8687a36482a9ddaa9b0fe5c21ef4f796f23f0fd6d56562b7482f556f7"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "method": "hybrid_astar",
+  "scenario": "clear",
+  "seed": 11,
+  "status": "passed",
+  "detail": "",
+  "progress_m": 44.73153929638099,
+  "simulated_s": 27.3,
+  "encounters": [],
+  "min_body_gap_m": null,
+  "command_ticks": 546,
+  "reached_stop": true,
+  "active_plan_calls": 0,
+  "planning_call_p95_ms": null,
+  "pipeline_p95_ms": 2.082834250245469,
+  "pipeline_max_ms": 266.6068630001064,
+  "deadline_misses": 1,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.10479974341683873
+}

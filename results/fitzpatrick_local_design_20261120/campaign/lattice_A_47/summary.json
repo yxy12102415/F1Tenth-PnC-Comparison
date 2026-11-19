@@ -1,0 +1,38 @@
+{
+  "method": "lattice",
+  "scenario": "A",
+  "seed": 47,
+  "status": "controller_rejection",
+  "detail": "joint_mpc_nonlinear_infeasible eq=0.001359 ineq=0.000000",
+  "progress_m": 6.3472244669041835,
+  "simulated_s": 4.55,
+  "encounters": [
+    {
+      "name": "A",
+      "center": [
+        6.022211142155291,
+        1.8324089029725348
+      ],
+      "radius": 0.05,
+      "station": 5.97609567766336,
+      "minimum": 0.2889718681521772,
+      "rejoin_s": null,
+      "first_detection_s": 0.6307374241943262,
+      "passing_offset_m": 0.4973644096689879,
+      "dwell": 0,
+      "passed_station": false,
+      "rejoin_required": true
+    }
+  ],
+  "min_body_gap_m": 0.2889718681521772,
+  "command_ticks": 91,
+  "reached_stop": false,
+  "active_plan_calls": 1,
+  "planning_call_p95_ms": 6.239233000087552,
+  "pipeline_p95_ms": 2.7284755998380206,
+  "pipeline_max_ms": 261.0251679998328,
+  "deadline_misses": 1,
+  "collision": false,
+  "boundary": false,
+  "steer_rate_rms_rad_s": 0.16740138050102638
+}
