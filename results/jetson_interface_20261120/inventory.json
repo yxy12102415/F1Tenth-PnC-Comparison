@@ -2,8 +2,8 @@
   "domain": 85,
   "localhost_only": true,
   "mode": "inventory",
-  "sample_end_ros_s": 1795127905.291871,
-  "sample_duration_s": 2.0005036429997745,
+  "sample_end_ros_s": 1795128372.7257428,
+  "sample_duration_s": 2.0004458640005396,
   "nodes": [],
   "graph": {
     "/baseline/raw_scan": {
@@ -143,6 +143,49 @@
   "captured_rows": 0,
   "ros_distro": "foxy",
   "motion_authorized": false,
+  "optional_graph": {
+    "/baseline/map": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/route": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/initialpose": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/visual_pose": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/visual_scan": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/scan_relay_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/localization_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/operator_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/lattice_selected": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/confirmed_obstacles": {
+      "publishers": [],
+      "subscriptions": []
+    }
+  },
+  "map_services": {},
   "status": "OBSERVED",
   "ready": null
 }

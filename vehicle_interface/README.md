@@ -16,7 +16,7 @@ bash vehicle_interface/on_car.sh preflight-run --seconds 3
 
 | 模式 | 结果 | 含义 |
 |---|---|---|
-| `inventory` | `OBSERVED`，退出 0 | 已读取当前节点及指定话题的 DDS 端点，`ready` 为 null。可查看 `identity.status`。 |
+| `inventory` | `OBSERVED`，退出 0 | 已读取当前节点及指定话题的 DDS 端点，`ready` 为 null。可查看 `identity.status`。`optional_graph` 列出地图、路线、初始化、可视化及诊断端点，`map_services` 记录地图服务的实际类型。 |
 | `zero` 或 `run` | `OBSERVED_MATCH`，退出 0 | 观察窗口内确认了进程身份、规定的写入方、必需订阅方、类型、可靠性与持久性兼容、有效同步输入和守护状态。 |
 | `zero` 或 `run` | `NOT_READY`，退出 1 | `issues` 给出缺失、冲突、超时或无效状态。未匹配会话时只读取图，不订阅车辆数据。 |
 | 任意 | `UNVERIFIED`，退出 2 | 域或环境不符、ROS 或端点查询不可用、文件输出失败等。 |
@@ -44,7 +44,7 @@ bash vehicle_interface/on_car.sh preflight-run --seconds 3
 1. 运行模式下 `route_operator_gate` 读取 `/baseline/joy` 的按钮 4（PS4 L1）并观察名义控制和有效位，发布 `/baseline/arm`、`/baseline/deadman`、`/baseline/enable`。零输出模式不启动该节点。操作员释放、再次按住、输入新鲜度和监督器就绪条件均由既有车辆侧实施。
 2. `final_command_guard` 综合名义 Ackermann、扫描、里程计、规划有效位、arm 和 deadman，向 `/baseline/final` 独占发布 Ackermann，`base_link`、控制上限 2.00 m/s 与 0.27 rad。v8 将相关超时设为 0.50 s，关闭目标信念依赖。报告验证 final 守护的锁存、配置标志和状态。[Final 守护源码](commissioned_guard_sources/final_command_guard.py)
 3. `stand_window` 结合 final 时间、L1、监督器 `/stand_pf/permit` 与独立 `/stand_pf/health_permit`，以 50 Hz 向 `/stand_pf/actuator_input` 发命令。它自行盖章并保留默认空 frame_id。单次窗口上限 90 s，释放、超时等情况使窗口停止。健康来自 VESC 遥测桥接的 `/stand_pf/health`，包括原始 ROS 时间、eRPM、电流、电压、占空比、故障和 FET 温度。独立健康节点需要连续有效数据完成启动资格判定。[单次运行窗口](../real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/stand_window.py) · [健康判定](../real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/ground_pp/health_core.hpp)
-4. `hardware_actuator_guard` 独占发布 Float64 的 `/stand_pf/motor_speed`（7500 eRPM/(m/s)，上限 15000 eRPM）、`/stand_pf/motor_current`（零电流滑行）及 `/stand_pf/servo`（归一化命令，−1.2135 × 转角 + 0.4304，范围 0.10–0.76）。零输出模式把驱动输入改到 `/stand_pf/servo_disabled`，电流和速度上下限均为零。域内重映射后的制动、电机位置、占空比和禁用舵机端口不得出现其他写入者。[实车执行器守护](commissioned_guard_sources/hardware_actuator_guard.py) · [命令转换与滑行](commissioned_guard_sources/safety_core.py)
+4. `hardware_actuator_guard` 独占发布 Float64 的 `/stand_pf/motor_speed`（7500 eRPM/(m/s)，上限 15000 eRPM）、`/stand_pf/motor_current`（零电流滑行）及 `/stand_pf/servo`（归一化命令，−1.2135 × 转角 + 0.4304，范围 0.10–0.76）。零输出模式把驱动输入改到 `/stand_pf/servo_disabled`，电流和速度上下限均为零。零输出采样还要求窗口报告未启动、许可未生效且速度转角为零，执行器报告零 eRPM、零电流与居中舵机。域内重映射后的制动、电机位置、占空比和禁用舵机端口不得出现其他写入者。[实车执行器守护](commissioned_guard_sources/hardware_actuator_guard.py) · [命令转换与滑行](commissioned_guard_sources/safety_core.py)
 5. `/stand_pf/servo_feedback` 的值是 VESC 驱动回发的**已裁剪指令**。运行模式的里程计根据速度与该指令估算角速度，零输出模式关闭此计算。VESC 核心遥测提供速度、电流等测量。车辆没有通过这个接口测量实际舵角，动态控制的转角、横向速度及偏航率观测器要和真实传感器读数区分。[驱动舵机回调](../real_vehicle/stand_speed_15_monitor_v1/src/vesc_driver/src/vesc_driver.cpp)
 
 ## 同步帧和实时流
@@ -70,3 +70,5 @@ bash vehicle_interface/on_car.sh test-guard
 ```
 
 第一项使用标准库核验传感器、两种时钟、坐标系、拓扑冲突、守护状态，以及其他赛道进程、重复进程、进程重启和资产变更。第二项只在本机域 141 的临时测试命名空间中生成四种合成输入，经过 ROS 序列化进入与实车相同的订阅和同步代码。它支持 `--input` 传入同步的 20 Hz 合成地图扫描和 `--output` 导出经 DDS 的结果。第三项在独立域 142 验证守护消息链，通过包装脚本调用。车辆状态、测试域数据和已有地面圈速应分别解读。[Jetson 现场核查](../results/jetson_interface_20261120) · [影子算法测试证据](../results/vehicle_shadow_20261120)
+
+2026-09-27 的 v8 合格零输出档案保留了 621 个零 final、781 个零电流、781 个归一化值为 0.4304 的舵机命令，速度模式消息数为 0。按日志对齐的 5.009 s 区间有 98 个有效的 waiting_for_operator 控制状态，健康桥的 230 个 VESC 样本均通过当前字段与源时间检查。随后正常关闭引发执行器超时。运动实测档案的对应活动区间为 26.672 s，533 个控制状态有效，健康桥 1331 个样本通过检查。日志保存了状态变化及控制值，原始规划有效 Bool、enable/arm/deadman、端点身份与 DDS QoS 仍须在物理图单独观察。[历史消息字段、原文件摘要与采样定义](../results/jetson_interface_20261120/archived_status_check.json)

@@ -1,0 +1,277 @@
+{
+  "kind": "archived physical message field cross-check, not a new live DDS/clock/actuation test",
+  "phase_definition": {
+    "zero": "First window health_ready=true until last waiting_for_operator + valid controller message; half-open interval. Entire zero command trace used for bounds.",
+    "run": "First ARMED final event until first latched window event; half-open interval."
+  },
+  "status_selection": "Controller from nearest logged sample at/before interval midpoint. Other status payloads from most recent state-change event at/before midpoint. Event timestamps do not establish continuous status delivery or motor mode during movement.",
+  "clock_check": "Health decoded against recorded bridge ROS clock and monotonic receipt at that individual sample. Source age between bridge and observer, sustained callback freshness and replayable raw scans/odom are unavailable in these traces.",
+  "topic_evidence": "Raw planner_valid/enable/arm/deadman, endpoint owners, QoS and native message headers were not recorded. Controller valid comes from the same v8 emit() argument as planner_valid. Operator status reflects gate decisions.",
+  "sessions": {
+    "zero": {
+      "source_directory": "20260927_231953-closed-frenet-ground-zero",
+      "sha256": {
+        "status_events.json": "290ab070b9ec6bbe231f828289cfa9d5df564516c1933b2ac74b4c302e18a70a",
+        "command_trace.json": "09d161807ccbd08835bee6b40a16d8f8597c4d1ae26edacc45a8458f54a15584",
+        "tracking_trace.json": "e0813fb8a217ae2e72ac7cebc90c3992e6561e86806ba01e3683e4ae3c30d608",
+        "result.json": "637b8143d20c752eb7365541e179328c447c4e5afd8f789006980c309d60e85a"
+      },
+      "passed": true,
+      "continuous_localization_passed": true,
+      "interval_s": 5.00912,
+      "recorded_commands": {
+        "current_A": {
+          "count": 781,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "speed_mode_eRPM": {
+          "count": 0,
+          "min": null,
+          "max": null
+        },
+        "final_mps": {
+          "count": 621,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "final_rad": {
+          "count": 621,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "servo_normalized": {
+          "count": 781,
+          "min": 0.4304,
+          "max": 0.4304
+        }
+      },
+      "status_fields": {
+        "final": {
+          "armed": false,
+          "arm_state": "DISARMED",
+          "latched": false,
+          "stop_reason": "disarmed",
+          "real_vehicle_profile": true,
+          "straight_line_fallback_allowed": false
+        },
+        "window": {
+          "reason": "no_fresh_permit",
+          "latched": false,
+          "started": null,
+          "speed": 0.0,
+          "steering": 0.0,
+          "health_ready": true,
+          "ready_for_permission": true
+        },
+        "pp": {
+          "valid": true,
+          "reason": "waiting_for_operator",
+          "speed_command": 0,
+          "steering_command": 0,
+          "complete": false
+        },
+        "health_guard": {
+          "reason": "healthy",
+          "healthy": true,
+          "qualified": true,
+          "samples": 33,
+          "receipt_age_s": 0.00016451200008305022,
+          "source_age_s": 0.005968809127807617
+        },
+        "actuator": {
+          "motor_mode": "coast",
+          "stop_reason": "",
+          "current": 0.0,
+          "rpm": 0.0,
+          "servo": 0.4304,
+          "input_age_sec": 0.001635
+        }
+      },
+      "controller_status_counts": {
+        "observed": 98,
+        "valid_true": 98,
+        "reasons": [
+          "waiting_for_operator"
+        ]
+      },
+      "operator_status_present": false,
+      "teardown": {
+        "actuator": {
+          "motor_mode": "coast",
+          "stop_reason": "final_command_timeout",
+          "current": 0.0,
+          "rpm": 0.0,
+          "servo": 0.4304,
+          "input_age_sec": 1.828517
+        },
+        "final": {
+          "armed": false,
+          "arm_state": "DISARMED",
+          "latched": false,
+          "stop_reason": "disarmed",
+          "real_vehicle_profile": true,
+          "straight_line_fallback_allowed": false
+        },
+        "window": {
+          "reason": "no_fresh_permit",
+          "latched": false,
+          "started": null,
+          "speed": 0.0,
+          "steering": 0.0,
+          "health_ready": true,
+          "ready_for_permission": true
+        }
+      },
+      "health_samples_valid_at_logged_bridge_ros": 230,
+      "example_health": {
+        "stamp": 1790565606.5165348,
+        "bridge_ros": 1790565606.5181746,
+        "receipt_mono": 2851.064472655,
+        "erpm": 0.0,
+        "motor_current": 0.0,
+        "input_current": 0.0,
+        "fet_temp": 28.4,
+        "voltage": 11.9,
+        "duty_cycle": 0.0,
+        "fault": 0
+      },
+      "status_contract_rejections": {
+        "final": null,
+        "window": null,
+        "health_guard": null,
+        "actuator": null,
+        "pp": null
+      },
+      "teardown_result": {
+        "final": null,
+        "window": null,
+        "actuator": "actuator reports final_command_timeout"
+      }
+    },
+    "run": {
+      "source_directory": "20260927_232018-closed-frenet-ground-attempt",
+      "sha256": {
+        "status_events.json": "b4d4ccb5056061161a9e8b586292df696873758befd39bb4178213faee7fe29f",
+        "command_trace.json": "56b56dfe19232c909df7755b4d7ccc1f896fc7e4ec52b5cc01eff466f2f85249",
+        "tracking_trace.json": "345cb2d35dce8344071f57408359e07bdec5e6af605fa8916a3c4e9b11112b2f",
+        "result.json": "7869032a72624289aa45ffb2162766fa9654669e1fbdda34f133c73a4d139cb2"
+      },
+      "passed": true,
+      "continuous_localization_passed": false,
+      "interval_s": 26.67184,
+      "recorded_commands": {
+        "armed_interval_speed_eRPM_max": 15000.0
+      },
+      "status_fields": {
+        "final": {
+          "armed": true,
+          "arm_state": "ARMED",
+          "latched": false,
+          "stop_reason": "",
+          "real_vehicle_profile": true,
+          "straight_line_fallback_allowed": false
+        },
+        "window": {
+          "reason": "",
+          "latched": false,
+          "started": null,
+          "speed": 0.0,
+          "steering": 0.0,
+          "health_ready": true,
+          "ready_for_permission": false
+        },
+        "pp": {
+          "valid": true,
+          "reason": "ok",
+          "speed_command": 1.9986790798829055,
+          "steering_command": -0.0654857978245851,
+          "complete": false
+        },
+        "health_guard": {
+          "reason": "healthy",
+          "healthy": true,
+          "qualified": true,
+          "samples": 52,
+          "receipt_age_s": 0.00017001600008370588,
+          "source_age_s": 0.0025873184204101562
+        },
+        "actuator": {
+          "motor_mode": "coast",
+          "stop_reason": "",
+          "current": 0.0,
+          "rpm": 0.0,
+          "servo": 0.4304,
+          "input_age_sec": 0.034703
+        },
+        "operator": {
+          "enable": true,
+          "arm": true,
+          "deadman": true,
+          "reason": "",
+          "release_latched": false
+        }
+      },
+      "controller_status_counts": {
+        "observed": 533,
+        "valid_true": 533,
+        "reasons": [
+          "ok"
+        ]
+      },
+      "operator_status_present": true,
+      "teardown": {
+        "actuator": {
+          "motor_mode": "coast",
+          "stop_reason": "final_command_timeout",
+          "current": 0.0,
+          "rpm": 0.0,
+          "servo": 0.4304,
+          "input_age_sec": 0.990658
+        },
+        "final": {
+          "armed": false,
+          "arm_state": "LATCHED",
+          "latched": true,
+          "stop_reason": "teleop_deadman_released",
+          "real_vehicle_profile": true,
+          "straight_line_fallback_allowed": false
+        },
+        "window": {
+          "reason": "upstream_stop",
+          "latched": true,
+          "started": 2905.035006532,
+          "speed": 0.0,
+          "steering": 0.0,
+          "health_ready": true,
+          "ready_for_permission": false
+        }
+      },
+      "health_samples_valid_at_logged_bridge_ros": 1331,
+      "example_health": {
+        "stamp": 1790565673.8222086,
+        "bridge_ros": 1790565673.823451,
+        "receipt_mono": 2918.3683938,
+        "erpm": 15037.0,
+        "motor_current": 8.02,
+        "input_current": 0.34,
+        "fet_temp": 29.3,
+        "voltage": 11.8,
+        "duty_cycle": 0.184,
+        "fault": 0
+      },
+      "status_contract_rejections": {
+        "final": null,
+        "window": null,
+        "health_guard": null,
+        "actuator": null,
+        "pp": null
+      },
+      "teardown_result": {
+        "final": "unexpected final guard state/profile teleop_deadman_released",
+        "window": "window reports upstream_stop",
+        "actuator": "actuator reports final_command_timeout"
+      }
+    }
+  }
+}

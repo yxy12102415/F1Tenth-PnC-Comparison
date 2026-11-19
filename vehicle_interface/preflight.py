@@ -15,11 +15,19 @@ from contract import (BOOL, DRIVE, JOY, ODOM, SCALAR, SCAN, SENSORS, TEXT, Sampl
                       channels, graph_issues)
 
 
+def qos_name(policy, family):
+    # Foxy exposes the RMW C enum name. Humble also exposes short policy names.
+    prefix = "RMW_QOS_POLICY_" + family + "_"
+    name = policy.name
+    return name[len(prefix):] if name.startswith(prefix) else name
+
+
 def endpoint(info):
     qos = info.qos_profile
     return {"node": info.node_namespace.rstrip("/") + "/" + info.node_name, "type": info.topic_type,
-            "reliability": qos.reliability.name, "durability": qos.durability.name,
-            "history": qos.history.name, "depth": qos.depth}
+            "reliability": qos_name(qos.reliability, "RELIABILITY"),
+            "durability": qos_name(qos.durability, "DURABILITY"),
+            "history": qos_name(qos.history, "HISTORY"), "depth": qos.depth}
 
 
 def topology(node, topics):
@@ -61,7 +69,7 @@ def subscribe(node, samples, on_snapshot):
         node.create_subscription(types[spec.type], topic, callback(topic), qos)
 
 
-def observe(args, output):
+def observe(args, output, window=None):
     import rclpy
     from rclpy.node import Node
 
@@ -106,6 +114,13 @@ def observe(args, output):
                 if ticks != bound[1]:
                     loss.append("supervisor changed during capture")
                     return
+                if window is not None:
+                    try:
+                        if not window.include(row["scan_stamp"]):
+                            return
+                    except ValueError as exc:
+                        loss.append(str(exc))
+                        return
                 if output is not None:
                     output.write(json.dumps(row, allow_nan=False, separators=(",", ":")) + "\n")
                 if args.stream_snapshots:
@@ -115,6 +130,8 @@ def observe(args, output):
                 last_match = True
             subscribe(node, samples, save)
         end = started + args.seconds
+        if window is not None:
+            end = min(end, window.deadline) if bound else started
         while time.monotonic() < end:
             rclpy.spin_once(node, timeout_sec=max(0., min(.05, end - time.monotonic())))
             # Inventory can see a competing graph without making any subscriptions.
@@ -129,7 +146,7 @@ def observe(args, output):
                     loss.extend(graph_errors)
                     break
                 checked_at = time.monotonic()
-            if loss:
+            if loss or (window is not None and window.complete):
                 break
         sample_ros = node.get_clock().now().nanoseconds * 1e-9
         sample_mono = time.monotonic()
@@ -142,10 +159,18 @@ def observe(args, output):
                   "identity": identity, "captured_rows": captured,
                   "ros_distro": os.environ.get("ROS_DISTRO"), "motion_authorized": False}
         if mode == "inventory":
+            optional = ("/baseline/map", "/baseline/route", "/initialpose", "/baseline/visual_pose",
+                        "/baseline/visual_scan", "/baseline/scan_relay_status", "/baseline/localization_status",
+                        "/stand_pf/operator_status", "/baseline/lattice_selected", "/baseline/confirmed_obstacles")
+            report["optional_graph"] = topology(node, optional)
+            report["map_services"] = {name: types for name, types in node.get_service_names_and_types()
+                                      if name == "/map_server/map"}
             report.update(status="OBSERVED", ready=None)
             return report, 0
         sample_errors, summary = samples.report(sample_ros, sample_mono)
         issues = list(loss)
+        if window is not None and not window.complete:
+            issues.append("continuous matched zero capture interval incomplete")
         if not bound or identity["status"] != "VERIFIED":
             issues.append("commissioned supervisor unverified before or at end of observation: " + identity["status"])
         issues.extend(graph_issues(topics, graph, mode) + sample_errors)

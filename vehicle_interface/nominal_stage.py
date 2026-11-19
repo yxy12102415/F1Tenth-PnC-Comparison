@@ -5,6 +5,7 @@ import contextlib
 import json
 import math
 import os
+import select
 from pathlib import Path
 import socket
 import subprocess
@@ -55,7 +56,8 @@ class Candidate:
             if row.get("method") != self.method or row.get("source_mode") != "live_stream":
                 raise ValueError("unexpected diagnostic method or source mode")
             if row.get("valid") is not True or row.get("reason") != "shadow" or row.get("actuation_authorized") is not False:
-                raise ValueError("invalid shadow result")
+                detail = row.get("reason")
+                raise ValueError("invalid shadow result: " + (detail[:160] if isinstance(detail, str) else "missing reason"))
             check_stamps(row, ros_now)
             if type(row.get("input_line")) is not int or row["input_line"] < 1:
                 raise ValueError("invalid input sequence")
@@ -99,6 +101,7 @@ class WorkerPipe:
         self.buffer = b""
 
     def read(self, candidate, now, monotonic_now):
+        closed = False
         try:
             while True:
                 try:
@@ -106,8 +109,8 @@ class WorkerPipe:
                 except BlockingIOError:
                     break
                 if not data:
-                    candidate.fail("diagnostic producer closed")
-                    return
+                    closed = True
+                    break
                 self.buffer += data
                 if len(self.buffer) > 65536:
                     raise ValueError("diagnostic input backlog")
@@ -115,6 +118,8 @@ class WorkerPipe:
             self.buffer = complete.pop()
             for line in complete:
                 candidate.accept(json.loads(line), now, monotonic_now)
+            if closed:
+                candidate.fail("diagnostic producer closed")
         except (OSError, ValueError, RecursionError) as exc:
             candidate.fail("invalid diagnostic stream: " + str(exc))
 
@@ -160,9 +165,16 @@ def serve(method):
         pubs = [node.create_publisher(msg_type, topic, 1)
                 for msg_type, topic in zip((AckermannDriveStamped, Bool, String), TOPICS)]
         candidate = Candidate(method)
-        worker = subprocess.Popen([sys.executable, str(Path(__file__).with_name("shadow.py")),
-                                   "--input", "-", "--output", "-", "--methods", method],
-                                  stdin=sys.stdin, stdout=subprocess.PIPE)
+        read_fd, write_fd = os.pipe()
+        cleanup.callback(os.close, read_fd)
+        try:
+            worker = subprocess.Popen([sys.executable, str(Path(__file__).with_name("shadow.py")),
+                                       "--input", "-", "--output", "-", "--methods", method,
+                                       "--ready-fd", str(write_fd)], stdin=sys.stdin, stdout=subprocess.PIPE,
+                                      pass_fds=(write_fd,))
+        finally:
+            os.close(write_fd)
+        ready = False
         reader = WorkerPipe(worker.stdout)
         last_publish, last_reason = float("-inf"), None
         try:
@@ -170,11 +182,18 @@ def serve(method):
                 if any(node.count_publishers(topic) != 1 for topic in TOPICS):
                     emit(node, pubs, candidate, 0., 0., False, "staging publisher conflict")
                     raise ValueError("multiple staging publishers or publisher discovery loss")
-                if worker.poll() is not None:
-                    candidate.fail("diagnostic producer exited")
+                if not ready and not candidate.failure and select.select([read_fd], [], [], 0)[0]:
+                    if os.read(read_fd, 1) == b"R":
+                        ready = True
+                    else:
+                        candidate.fail("diagnostic initialization failed")
                 if not candidate.failure:
                     reader.read(candidate, node.get_clock().now().nanoseconds * 1e-9, time.monotonic())
+                if worker.poll() is not None:
+                    candidate.fail("diagnostic producer exited")
                 decision = candidate.next_output(node.get_clock().now().nanoseconds * 1e-9, time.monotonic())
+                if not ready and not candidate.failure:
+                    decision = (0., 0., False, "initializing_algorithm")
                 if decision is not None:
                     valid, reason = decision[2:]
                     now = time.monotonic()

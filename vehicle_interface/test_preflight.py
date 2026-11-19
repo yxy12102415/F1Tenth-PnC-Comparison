@@ -153,11 +153,12 @@ class SampleTests(unittest.TestCase):
         health = dict(erpm=0, voltage=15, fet_temp=20, fault=0, duty_cycle=0, motor_current=0, input_current=0)
         payloads = {
             "/baseline/controller_status": {"reason": "waiting_for_operator", "valid": True},
-            "/baseline/final_status": dict(arm_state="DISARMED", latched=False, real_vehicle_profile=True,
+            "/baseline/final_status": dict(arm_state="DISARMED", armed=False, latched=False, real_vehicle_profile=True,
                                             straight_line_fallback_allowed=False),
             "/stand_pf/health_guard_status": {"healthy": True, "qualified": True},
-            "/stand_pf/actuator_status": {"motor_mode": "coast", "stop_reason": ""},
-            "/stand_pf/window_status": {"latched": False, "health_ready": True},
+            "/stand_pf/actuator_status": {"motor_mode": "coast", "stop_reason": "", "rpm": 0., "current": 0., "servo": .4304},
+            "/stand_pf/window_status": {"latched": False, "health_ready": True, "reason": "no_fresh_permit",
+                                       "started": None, "speed": 0., "steering": 0.},
         }
         for stamp in (100., 100.05):
             sensor_set(s, stamp)
@@ -179,6 +180,44 @@ class SampleTests(unittest.TestCase):
         issues, _ = s.report(100.06, 8.02)
         self.assertTrue(any("speed-mode" in i for i in issues))
         self.assertTrue(any("health_permit: false" in i for i in issues))
+
+
+class ArchivedStatusTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        path = Path(__file__).resolve().parents[1] / "results/jetson_interface_20261120/archived_status_check.json"
+        cls.sessions = json.loads(path.read_text())["sessions"]
+
+    def test_actual_vehicle_status_fields_and_shutdown(self):
+        streams = {"pp": "/baseline/controller_status", "actuator": "/stand_pf/actuator_status",
+                   "final": "/baseline/final_status", "window": "/stand_pf/window_status",
+                   "health_guard": "/stand_pf/health_guard_status"}
+        for mode, data in self.sessions.items():
+            s = Samples(mode)
+            for name, topic in streams.items():
+                s.receive(topic, NS(data=json.dumps(data["status_fields"][name])), 0., 1.)
+                self.assertIsNone(s.issue(topic, 0., 1.), (mode, name))
+            h = data["example_health"]
+            s.receive("/stand_pf/health", NS(data=json.dumps(h)), h["bridge_ros"], h["receipt_mono"])
+            self.assertIsNone(s.issue("/stand_pf/health", h["bridge_ros"], h["receipt_mono"]))
+            for name, expected in data["teardown_result"].items():
+                topic = streams[name]
+                s.receive(topic, NS(data=json.dumps(data["teardown"][name])), 0., 1.)
+                self.assertEqual(s.issue(topic, 0., 1.), expected)
+
+    def test_inconsistent_zero_outputs_are_rejected(self):
+        s = Samples("zero")
+        fields = self.sessions["zero"]["status_fields"]
+        for name, topic, edits in (
+            ("actuator", "/stand_pf/actuator_status", {"rpm": 20.}),
+            ("window", "/stand_pf/window_status", {"reason": "deadman_not_ready"}),
+            ("window", "/stand_pf/window_status", {"started": 2840.}),
+            ("final", "/baseline/final_status", {"armed": True}),
+        ):
+            s.receive(topic, NS(data=json.dumps(dict(fields[name], **edits))), 0., 1.)
+            self.assertTrue(s.issue(topic, 0., 1.))
+        s.receive("/stand_pf/servo", NS(data=.7), 0., 1.)
+        self.assertTrue(any("off-center" in issue for issue in s.limits))
 
 
 class IdentityTests(unittest.TestCase):
@@ -234,6 +273,18 @@ class IdentityTests(unittest.TestCase):
             self.assertTrue(any("assets binding" in x for x in self.identity.check("zero")["issues"]))
             (main / "environ").write_bytes(b"ROS_DOMAIN_ID=83\0ROS_LOCALHOST_ONLY=1\0")
             self.assertTrue(any("environment" in x for x in self.identity.check("zero")["issues"]))
+
+
+class FoxyQosTest(unittest.TestCase):
+    def test_vendor_names_report_the_same_negotiated_policies(self):
+        from preflight import qos_name
+        for family, names in (("RELIABILITY", ("RELIABLE", "BEST_EFFORT")),
+                              ("DURABILITY", ("VOLATILE", "TRANSIENT_LOCAL")),
+                              ("HISTORY", ("KEEP_LAST",))):
+            for name in names:
+                self.assertEqual(qos_name(NS(name=name), family), name)
+                self.assertEqual(qos_name(NS(name="RMW_QOS_POLICY_" + family + "_" + name), family), name)
+        self.assertEqual(qos_name(NS(name="SYSTEM_DEFAULT"), "RELIABILITY"), "SYSTEM_DEFAULT")
 
 
 if __name__ == "__main__":

@@ -7,6 +7,7 @@ import json
 import math
 import os
 import select
+import stat
 import sys
 import time
 from pathlib import Path
@@ -15,10 +16,25 @@ import numpy as np
 from algorithm_shadow import ASSETS, DT, METHODS, Algorithm, Native, Route, Scene, validate_snapshot
 
 
-def live_lines():
+def live_lines(ready_fd=None):
     """Bound pipe silence and partial input on an actual system-clock ROS stream."""
     pending = bytearray()
     stream = sys.stdin.fileno()
+    skip_fragment = False
+    if ready_fd is not None:
+        # This generator first runs after Route, Scene, algorithms, and the native
+        # model handshake are ready. Discard queued startup bytes, never re-date a row.
+        drained = 0
+        while select.select([stream], [], [], 0)[0]:
+            data = os.read(stream, 65536)
+            if not data:
+                raise ValueError("live snapshot producer closed during initialization")
+            drained += len(data)
+            if drained > 2_000_000:
+                raise ValueError("excess queued input during initialization")
+            skip_fragment = not data.endswith(b"\n")
+        os.write(ready_fd, b"R")
+        os.close(ready_fd)
     deadline = time.monotonic() + 30.0  # graph discovery before the first accepted sample
     while True:
         wait = max(0., deadline-time.monotonic())
@@ -29,6 +45,11 @@ def live_lines():
             if pending:
                 raise ValueError("incomplete live JSONL row")
             return
+        if skip_fragment:
+            _, marker, data = data.partition(b"\n")
+            if not marker:
+                continue
+            skip_fragment = False
         pending.extend(data)
         while b"\n" in pending:
             line, _, rest = pending.partition(b"\n")
@@ -130,6 +151,7 @@ def main():
     parser.add_argument("--input", required=True, help="JSONL or .jsonl.gz capture file, or - for live system-clock JSONL stdin")
     parser.add_argument("--output", required=True, help="new diagnostics JSONL file, or - for stdout")
     parser.add_argument("--methods", nargs="+", choices=METHODS, default=METHODS)
+    parser.add_argument("--ready-fd", type=int, help=argparse.SUPPRESS)
     parser.add_argument("--seed", type=int, default=11)
     parser.add_argument("--start-s", type=float, default=0., help="known unwrapped starting station (metres)")
     args = parser.parse_args()
@@ -139,9 +161,12 @@ def main():
         if not ASSETS.is_file():
             parser.error("run vehicle_interface/algorithm_build.sh first")
         live = args.input == "-"
+        if args.ready_fd is not None and (not live or args.ready_fd < 3 or
+                                        not stat.S_ISFIFO(os.fstat(args.ready_fd).st_mode)):
+            parser.error("--ready-fd requires live input and an inherited readiness pipe")
         with contextlib.ExitStack() as stack:
             if live:
-                src = live_lines()
+                src = live_lines(args.ready_fd)
             elif args.input.endswith(".gz"):
                 src = stack.enter_context(gzip.open(args.input, "rt"))
             else:

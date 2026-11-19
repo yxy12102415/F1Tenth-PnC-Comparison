@@ -34,6 +34,33 @@ bash vehicle_interface/on_car.sh inventory --seconds 2
 
 在 Jetson Xavier NX 上，静止合成扫描的空场短片产生 80/80 条有效候选；有障碍短片中 52/80 有效。Hybrid A*、lattice、RRT* 和 TEB 的首次避障重规划在该次多方法重放中超过 50 ms，候选被拒绝并锁存。仓库保留了原始拒绝记录及单方法复查。**新方法当前可做传感器采集、影子运行与隔离的 ROS 输出检查，尚未验收实车接管。** [Jetson 实测记录](results/jetson_interface_20261120/README.md)
 
+### 第一次实车采集
+
+在 Jetson 的终端 A 先让观察器等待符合条件的零输出窗口。
+
+```bash
+cd ~/F1Tenth-PnC-Comparison
+mkdir -p vehicle_runs
+run_id=$(date +%Y%m%d-%H%M%S)
+sample="$PWD/vehicle_runs/zero-$run_id.jsonl"
+bash vehicle_interface/on_car.sh wait-zero "$sample"
+```
+
+在终端 B 确认没有其他车辆会话，车辆位于 Fitzpatrick 固定起点，朝向与地图一致，PS4 L1 已松开，现场人员能切断动力。再运行已部署版本的零输出流程。它启动实际传感器与 VESC，禁用驱动输出，完成后自动退出。
+
+```bash
+cd ~/f1tenth_real_migration_ws_20260829
+bash fitzpatrick_avoidance_dynamic_mpc.sh zero
+```
+
+终端 A 显示成功并写入文件后，重放这次实车采集：
+
+```bash
+bash vehicle_interface/on_car.sh shadow --input "$sample" --methods pp --output "vehicle_runs/pp-$run_id.jsonl"
+```
+
+若观察器报告 `NOT_READY`，从 `identity`、时间戳和缺失话题查原因。车上已有模型可直接重放；新克隆先运行 `bash vehicle_interface/on_car.sh build-shadow`。[命令端隔离验证](vehicle_interface/NOMINAL_STAGE.md)
+
 ## 来源与接口边界
 
 仿真实验从开发工作区独立导出。源 checkout 的历史锚点为 `f1tenth-takeover@97bdd9c`，本导出同时包含当时尚未提交的比较代码和结果。原数据档中保存了实验时的源码指纹，本仓库另附复现输入；物理归档中的历史文件路径已改成相对于当时车辆工作区的路径。历史配置和运行数据的出处请见归档说明。[复现档案](results/fitzpatrick_local_design_20261120/reproduction/) · [官方 F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym)

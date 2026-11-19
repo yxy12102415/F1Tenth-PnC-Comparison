@@ -8,6 +8,7 @@ usage() {
     cat <<'HELP'
 on_car.sh installed-check | inventory | preflight-zero | preflight-run [observer options]
 on_car.sh capture zero|run NEW.jsonl [--seconds N]
+on_car.sh wait-zero NEW.jsonl [--seconds 1.5] [--timeout 120]
 on_car.sh build-shadow | shadow --input CAPTURE --output NEW.jsonl [--methods ...]
 on_car.sh nominal-stage --method METHOD | test-nominal-stage | test-guard
 All observers are read-only. The guard wire test uses its own localhost ROS domain.
@@ -31,6 +32,9 @@ case "$action" in
         [[ $# -ge 2 && ( "$1" == zero || "$1" == run ) ]] || { usage; exit 2; }
         mode=$1; dest=$2; shift 2
         physical_observer --mode "$mode" --snapshots "$dest" "$@" ;;
+    wait-zero)
+        exec bash "$entry" env ROS_DOMAIN_ID=85 ROS_LOCALHOST_ONLY=1 \
+            "PNC_COMMISSIONED_WORKSPACE=$ws" python3 "$repo/vehicle_interface/commissioned_zero_capture.py" "$@" ;;
     build-shadow)
         [[ $# == 0 ]] || exit 2
         export ACADOS_INSTALL_DIR=${ACADOS_INSTALL_DIR:-"$ws/reference_sources/joint_mpc_20260926/acados_install"}

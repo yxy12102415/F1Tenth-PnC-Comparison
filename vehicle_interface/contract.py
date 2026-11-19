@@ -244,6 +244,8 @@ class Samples:
                     self.limits.add(topic + " observed nonzero zero-mode command")
                 if topic == "/stand_pf/motor_speed":
                     self.limits.add(topic + " observed speed-mode output in zero mode")
+                if topic == "/stand_pf/servo" and not math.isclose(value, .4304, rel_tol=0., abs_tol=1e-6):
+                    self.limits.add(topic + " observed off-center servo command in zero mode")
                 if topic == "/stand_pf/health" and abs(value["erpm"]) >= 100:
                     self.limits.add(topic + " observed nonstationary eRPM in zero mode")
             if topic == "/stand_pf/motor_current" and value != 0:
@@ -278,7 +280,8 @@ class Samples:
         if topic == "/baseline/final_status":
             if (value.get("arm_state") not in (("DISARMED",) if self.mode == "zero" else ("DISARMED", "ARMED"))
                     or value.get("latched") is not False or value.get("real_vehicle_profile") is not True
-                    or value.get("straight_line_fallback_allowed") is not False):
+                    or value.get("straight_line_fallback_allowed") is not False
+                    or value.get("armed") is not (value.get("arm_state") == "ARMED")):
                 return "unexpected final guard state/profile " + str(value.get("stop_reason"))
         if topic == "/stand_pf/health_guard_status" and (value.get("healthy") is not True
                                                          or value.get("qualified") is not True):
@@ -287,9 +290,17 @@ class Samples:
             modes = ("coast",) if self.mode == "zero" else ("speed", "coast")
             if value.get("motor_mode") not in modes or value.get("stop_reason") != "":
                 return "actuator reports " + str(value.get("stop_reason"))
+            if self.mode == "zero" and (value.get("rpm") != 0 or value.get("current") != 0
+                                        or not isinstance(value.get("servo"), (int, float))
+                                        or not math.isclose(value["servo"], .4304, rel_tol=0., abs_tol=1e-6)):
+                return "zero mode requires zero motor demand and centered servo"
         if topic == "/stand_pf/window_status" and (value.get("latched") is not False
                                                     or value.get("health_ready") is not True):
             return "window reports " + str(value.get("reason"))
+        if self.mode == "zero" and topic == "/stand_pf/window_status":
+            if (value.get("reason") != "no_fresh_permit" or value.get("started", False) is not None
+                    or value.get("speed") != 0 or value.get("steering") != 0):
+                return "zero mode window active or output nonzero"
         return None
 
     def snapshot(self, ros_now, mono_now):

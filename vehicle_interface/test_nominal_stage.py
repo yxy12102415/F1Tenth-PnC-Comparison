@@ -48,7 +48,7 @@ class InputTests(unittest.TestCase):
                 self.assertFalse(c.next_output(100.05, 1.05)[2])
 
 
-def dds_test():
+def dds_test(stale=False):
     if os.environ.get("ROS_DOMAIN_ID") != DOMAIN or os.environ.get("ROS_LOCALHOST_ONLY") != "1":
         raise RuntimeError("DDS test requires the localhost staging domain")
     import rclpy
@@ -74,21 +74,31 @@ def dds_test():
                 raise RuntimeError("staging DDS condition failed; latest status " + str(status[-1:]))
             rclpy.spin_once(node, timeout_sec=.01)
     try:
-        wait_for(lambda: any(s["reason"] == "waiting_for_input" for s in status))
+        wait_for(lambda: any(s["reason"] == "waiting_for_input" for s in status), seconds=30.)
+        if stale:
+            stamp = time.time()-2.
+            child.stdin.write(json.dumps(dict(fixture, stamp=stamp, scan_stamp=stamp, odom_stamp=stamp))+"\n")
+            child.stdin.flush()
+            wait_for(lambda: status and "stale" in status[-1]["reason"] and commands and flags)
+            assert not any(flags) and not any(s["valid"] for s in status)
+            assert all(m.drive.speed == m.drive.steering_angle == 0. for m in commands)
+            print(json.dumps(dict(domain=int(DOMAIN), method="pp", intentional_source_age_s=2.,
+                                  valid_rows=0, final_reason=status[-1]["reason"], final_command=[0., 0.])))
+            return
         duplicate = subprocess.run(cmd, input="", capture_output=True, text=True, timeout=4)
         assert duplicate.returncode == 2 and "Address already in use" in duplicate.stderr
         # The fixture supplies new system-clock timestamps exclusively inside this test.
-        # Let Python/SciPy startup finish before creating any measured source timestamps.
-        time.sleep(1.)
+        # The native model and Python worker signal their readiness before the first row.
+        base = time.monotonic()
         for index in range(8):
             stamp = time.time()
             packet = dict(fixture, stamp=stamp, odom_stamp=stamp, scan_stamp=stamp)
             child.stdin.write(json.dumps(packet) + "\n")
             child.stdin.flush()
-            end = time.monotonic()+.05
+            end = base+(index+1)*.05
             while time.monotonic() < end:
-                rclpy.spin_once(node, timeout_sec=min(.005, end-time.monotonic()))
-        wait_for(lambda: any(s["valid"] for s in status) and True in flags and any(d.drive.speed > 0 for d in commands))
+                rclpy.spin_once(node, timeout_sec=max(0., min(.005, end-time.monotonic())))
+        wait_for(lambda: sum(s["valid"] for s in status) == 8 and True in flags and any(d.drive.speed > 0 for d in commands))
         positive = [m for m in commands if m.drive.speed > 0]
         assert all(m.header.frame_id == "base_link" and m.header.stamp.sec > 0 for m in positive)
         good = [s for s in status if s["valid"]]
@@ -100,6 +110,7 @@ def dds_test():
         assert all(node.count_publishers(topic) == 1 for topic in TOPICS)
         print(json.dumps(dict(method="pp", domain=int(DOMAIN), valid_rows=len(good),
                               final_reason=status[-1]["reason"], final_command=[0., 0.],
+                              max_compute_ms=max(s["compute_ms"] for s in good), backend_ready_handshake=True,
                               duplicate_publisher_rejected=True, fixture="synthetic current-stamp DDS")))
     finally:
         if not child.stdin.closed:
@@ -118,8 +129,11 @@ def dds_test():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dds", action="store_true")
+    parser.add_argument("--stale", action="store_true", help="inject a two-second-old source after native readiness")
     args = parser.parse_args()
+    if args.stale and not args.dds:
+        parser.error("--stale requires --dds")
     if args.dds:
-        dds_test()
+        dds_test(args.stale)
     else:
         unittest.main(argv=[__file__])

@@ -16,6 +16,12 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 vehicle_interface/shadow.py \
 
 输出路径须为新文件。默认同时比较全部十种方法。选择一个方法可传 `--methods lattice`。无参数的首次投影从固定起点开始；中途停车采集可用 `--start-s` 提供已知的本圈起始弧长（米）。首帧速度必须在 0.10 m/s 以内，因为控制器从静止、零转角初始化。重放模式使用记录中的传感器时间；`--input -` 专供当前实车系统时钟的实时流，会拒绝旧数据。
 
+如要采集原车默认五秒零输出检查中的短窗口，可先在旁路终端启动以下等待命令，再由现场操作员在另一终端启动原车 v8 的 `zero`。它最多等待 120 秒，只在已核实的监督器、ROS 图、健康守护和定位同时就绪时开始记录。默认窗口为 1.5 秒，可通过 `--seconds` 选择 1–2 秒。采集中途失去资格时会丢弃临时数据。输出文件仅在最终检查也通过后出现。等待、超时、健康丢失与文件保护逻辑已用模拟状态验证，现场采集成功须以该次生成的报告和数据为准。
+
+```sh
+bash vehicle_interface/on_car.sh wait-zero /tmp/fitz-zero-observation.jsonl
+```
+
 在已运行的 v8 零输出图中，设置本机 Foxy 环境和项目 overlay 后可实时观察。先在同一 Jetson 运行只读预检，选择单个算法，以免其他方法的串行耗时延迟观察。地面试验的既有 ROS 图由现场独立启动。
 
 ```sh
@@ -51,4 +57,4 @@ v8 感知以扫描时刻的 map→base_link 位姿和车前 0.27 m 的激光外�
 
 同一接口还在真车 Jetson 上进行了**合成输入重放**。空场得到 80/80 个有效诊断。障碍场为 52/80，五个跟踪器和 DWA 各为 8/8。Hybrid A*、Lattice、RRT*、TEB 首次主动重规划耗时分别为 **185.1、73.2、179.2、238.1 ms**，各方法第一帧直行通过，第二帧超时、其余帧锁存。对应方法的同步实现未达到该板的 20 Hz 截止要求。后续可按 v8 的独立规划与控制线程设计，令 20 Hz 控制器只消费带采样时间、生成时间和有效期限的完整计划，同时在每个控制周期重新检查当前感知和预测轨迹；超过租期仍需归零。该设计仍需用本机负载和真实采样验证。 [Jetson 空场输出](../results/jetson_interface_20261120/jetson_clear.jsonl.gz) · [Jetson 障碍输出](../results/jetson_interface_20261120/jetson_obstacle.jsonl.gz)
 
-已有 v8 地面证据对应当时的 v8 规划器、控制器和安全链。使新方法能够发出实车指令，还需要将选定方法作为唯一 `/baseline/drive_nominal` 与 `/baseline/planner_valid` 写入者接入既有 supervisor，验证控制器状态身份和 freshness、计划失效/终点滑行处理、操作员 L1 释放及独立运动窗口，随后验证传感器失联、截止超时和急停时驱动归零。项目中的 Gym 求解器和 Gym 几何仅用于复现比较；物理构建脚本和编译断言检查选中的模型，尚未完成地面验收的方法当前只生成诊断文件。[已记录的 v8 地面结果](../results/fitzpatrick_v8_20260927/analysis_summary.json)
+已有 v8 地面证据对应当时的 v8 规划器、控制器和安全链。使新方法能够发出实车指令，还需要将选定方法作为唯一 `/baseline/drive_nominal` 与 `/baseline/planner_valid` 写入者接入既有 supervisor，验证控制器状态身份和 freshness、计划失效/终点滑行处理、操作员 L1 释放及独立运动窗口，随后验证传感器失联、截止超时和急停时驱动归零。项目中的 Gym 求解器和 Gym 几何仅用于复现比较；物理构建脚本和编译断言检查选中的模型，新方法的候选可进入独立测试域的 ROS 名义输出适配器，地面验收仍待完成。[隔离域名义输出测试](NOMINAL_STAGE.md) [已记录的 v8 地面结果](../results/fitzpatrick_v8_20260927/analysis_summary.json)
