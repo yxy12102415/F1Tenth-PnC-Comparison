@@ -1,0 +1,148 @@
+{
+  "domain": 85,
+  "localhost_only": true,
+  "mode": "inventory",
+  "sample_end_ros_s": 1795127905.291871,
+  "sample_duration_s": 2.0005036429997745,
+  "nodes": [],
+  "graph": {
+    "/baseline/raw_scan": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/scan": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/localization_pose": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/odom": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/localization_valid": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/local_plan_cpp": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/drive_nominal": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/planner_valid": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/controller_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/arm": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/deadman": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/enable": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stage1_offline/reset_latch": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/final_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/final": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/permit": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health_permit": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health_guard_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/actuator_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/window_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/actuator_input": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/motor_current": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/motor_speed": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/telemetry": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo_feedback": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/joy": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_brake": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_position": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_duty_cycle": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo_disabled": {
+      "publishers": [],
+      "subscriptions": []
+    }
+  },
+  "identity": {
+    "status": "MISSING_SUPERVISOR",
+    "candidates": [],
+    "issues": []
+  },
+  "captured_rows": 0,
+  "ros_distro": "foxy",
+  "motion_authorized": false,
+  "status": "OBSERVED",
+  "ready": null
+}

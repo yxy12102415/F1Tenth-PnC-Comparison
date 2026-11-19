@@ -1,0 +1,19 @@
+{
+  "domain": 142,
+  "localhost_only": true,
+  "passed": true,
+  "actuation": false,
+  "ROS_final_guard": [
+    "disarmed_zero",
+    "armed_nominal",
+    "missing_nominal_latched",
+    "stays_latched"
+  ],
+  "window_and_actuator_core": [
+    "startup_slew",
+    "L1_release",
+    "stale_final_zero_current"
+  ],
+  "rpm_for_0_9_mps": 6749.999821186066,
+  "servo_for_0_1_rad": 0.30904999819174406
+}

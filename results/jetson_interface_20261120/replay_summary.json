@@ -1,0 +1,158 @@
+{
+  "jetson_clear.jsonl.gz": {
+    "dwa": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "hybrid_astar": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "lattice": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "linear_mpc": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "lqr": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "mppi": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "nmpc": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "pp": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "rrt_star": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "teb": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    }
+  },
+  "jetson_obstacle.jsonl.gz": {
+    "dwa": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "hybrid_astar": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 185.1099109999268,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "lattice": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 73.20283099988956,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "linear_mpc": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "lqr": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "mppi": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "nmpc": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "pp": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "rrt_star": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 179.19495800015284,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "teb": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 238.10938399992665,
+      "first_failure": "pipeline exceeded 50 ms"
+    }
+  },
+  "jetson_single_planner.jsonl.gz": {
+    "dwa": {
+      "valid": 8,
+      "total": 8,
+      "first_failure_ms": null,
+      "first_failure": null
+    },
+    "hybrid_astar": {
+      "valid": 0,
+      "total": 8,
+      "first_failure_ms": 50.497623999490315,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "lattice": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 88.92172500054585,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "rrt_star": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 189.68344199993226,
+      "first_failure": "pipeline exceeded 50 ms"
+    },
+    "teb": {
+      "valid": 1,
+      "total": 8,
+      "first_failure_ms": 247.8429149996373,
+      "first_failure": "pipeline exceeded 50 ms"
+    }
+  }
+}

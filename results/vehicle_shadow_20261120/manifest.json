@@ -1,0 +1,46 @@
+{
+  "source": "Synthetic stationary vehicle, 1081-ray measured-map raycast; localhost Humble Odometry, LaserScan and PF validity serialization, capture at physical message boundary.",
+  "machine": "x86_64",
+  "python": "3.10.12",
+  "case_frames": 8,
+  "methods": 10,
+  "commands_sent": 0,
+  "files": {
+    "clear.capture.jsonl.gz": {
+      "uncompressed_sha256": "49dd6d0fbaf4c31fcf360cd5f8d6801c8509de5f1930132f0c34eeeb5cb037fb",
+      "rows": 8
+    },
+    "clear.shadow.jsonl.gz": {
+      "uncompressed_sha256": "b3872696189517e0c3eaf7c2ff4d9c66df410d6434abeda2f4e73394abf595de",
+      "rows": 80
+    },
+    "obstacle.capture.jsonl.gz": {
+      "uncompressed_sha256": "5a5e7ffe63c91b6b4eb72c0fb15cb1e8a17618a90662253986c4f0532b69cf19",
+      "rows": 8
+    },
+    "obstacle.shadow.jsonl.gz": {
+      "uncompressed_sha256": "27247ee9e0f704bdbfe65270bd241728d54119f7e39d2aafc25d503ffc97d2fe",
+      "rows": 80
+    },
+    "synthetic_obstacle_deadline.shadow.jsonl.gz": {
+      "uncompressed_sha256": "e66467f7c7677b9c40a25da9d1fcda73a3b27181d56edad57f3ca1418ec28ae0",
+      "rows": 80
+    },
+    "moving.capture.jsonl.gz": {
+      "uncompressed_sha256": "9017612c8cf9e5c888c7b00e0bdab8811262bc823badb5fa4803aadb4126518d",
+      "rows": 32
+    },
+    "moving.shadow.jsonl.gz": {
+      "uncompressed_sha256": "dad6f7a849026e0ba4ea4585c2bbd044f5c7a561fcd6aa680ccf7dc06374518d",
+      "rows": 320
+    }
+  },
+  "additional_trace": "synthetic_obstacle_deadline ran directly on test_shadow.py obstacle fixture and includes a first active TEB replan over 50 ms.",
+  "moving_case": {
+    "description": "32 source-time frames; current pose, longitudinal odometry, command-derived yaw rate and 1081 wall/cylinder rays regenerated along a prescribed increasing-speed arc. Direct JSONL replay, no ROS transport or closed-loop dynamics.",
+    "peak_speed_mps": 0.6606875000000001,
+    "final_station_m": 0.3413552083333334,
+    "valid_candidates": 320,
+    "total_candidates": 320
+  }
+}

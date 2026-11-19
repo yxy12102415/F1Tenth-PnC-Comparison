@@ -1,0 +1,234 @@
+{
+  "domain": 85,
+  "localhost_only": true,
+  "mode": "zero",
+  "sample_end_ros_s": 1795127910.7080858,
+  "sample_duration_s": 1.0006525169997076,
+  "nodes": [],
+  "graph": {
+    "/baseline/raw_scan": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/scan": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/localization_pose": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/odom": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/localization_valid": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/local_plan_cpp": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/drive_nominal": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/planner_valid": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/controller_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/arm": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/deadman": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/enable": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stage1_offline/reset_latch": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/final_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/baseline/final": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/permit": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health_permit": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/health_guard_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/actuator_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/window_status": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/actuator_input": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/motor_current": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/motor_speed": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/telemetry": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo_feedback": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_brake": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_position": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/disabled_duty_cycle": {
+      "publishers": [],
+      "subscriptions": []
+    },
+    "/stand_pf/servo_disabled": {
+      "publishers": [],
+      "subscriptions": []
+    }
+  },
+  "identity": {
+    "status": "MISSING_SUPERVISOR",
+    "candidates": [],
+    "issues": []
+  },
+  "captured_rows": 0,
+  "ros_distro": "foxy",
+  "motion_authorized": false,
+  "ready": false,
+  "status": "NOT_READY",
+  "issues": [
+    "/baseline/arm missing std_msgs/msg/Bool reader /final_command_guard",
+    "/baseline/controller_status expected writer /frenet_cpp_controller, observed []",
+    "/baseline/controller_status missing std_msgs/msg/String reader /stand_pf_supervisor",
+    "/baseline/controller_status: no sample",
+    "/baseline/deadman missing std_msgs/msg/Bool reader /final_command_guard",
+    "/baseline/drive_nominal expected writer /frenet_cpp_controller, observed []",
+    "/baseline/drive_nominal missing ackermann_msgs/msg/AckermannDriveStamped reader /final_command_guard",
+    "/baseline/drive_nominal: no sample",
+    "/baseline/enable missing std_msgs/msg/Bool reader /frenet_cpp_controller",
+    "/baseline/enable missing std_msgs/msg/Bool reader /frenet_cpp_planner",
+    "/baseline/final expected writer /final_command_guard, observed []",
+    "/baseline/final missing ackermann_msgs/msg/AckermannDriveStamped reader /stand_window",
+    "/baseline/final: no sample",
+    "/baseline/final_status expected writer /final_command_guard, observed []",
+    "/baseline/final_status missing std_msgs/msg/String reader /stand_pf_supervisor",
+    "/baseline/final_status: no sample",
+    "/baseline/local_plan_cpp expected writer /frenet_cpp_planner, observed []",
+    "/baseline/local_plan_cpp missing std_msgs/msg/String reader /frenet_cpp_controller",
+    "/baseline/localization_pose expected writer /particle_filter, observed []",
+    "/baseline/localization_pose missing nav_msgs/msg/Odometry reader /frenet_cpp_controller",
+    "/baseline/localization_pose missing nav_msgs/msg/Odometry reader /frenet_cpp_planner",
+    "/baseline/localization_pose: no sample",
+    "/baseline/localization_valid expected writer /particle_filter, observed []",
+    "/baseline/localization_valid missing std_msgs/msg/Bool reader /frenet_cpp_controller",
+    "/baseline/localization_valid missing std_msgs/msg/Bool reader /frenet_cpp_planner",
+    "/baseline/localization_valid: no sample",
+    "/baseline/odom expected writer /stand_vesc_odometry, observed []",
+    "/baseline/odom missing nav_msgs/msg/Odometry reader /final_command_guard",
+    "/baseline/odom missing nav_msgs/msg/Odometry reader /frenet_cpp_controller",
+    "/baseline/odom missing nav_msgs/msg/Odometry reader /frenet_cpp_planner",
+    "/baseline/odom missing nav_msgs/msg/Odometry reader /particle_filter",
+    "/baseline/odom: no sample",
+    "/baseline/planner_valid expected writer /frenet_cpp_controller, observed []",
+    "/baseline/planner_valid missing std_msgs/msg/Bool reader /final_command_guard",
+    "/baseline/planner_valid: no sample",
+    "/baseline/raw_scan expected writer *, observed []",
+    "/baseline/raw_scan missing sensor_msgs/msg/LaserScan reader /stand_scan_relay",
+    "/baseline/scan expected writer /stand_scan_relay, observed []",
+    "/baseline/scan missing sensor_msgs/msg/LaserScan reader /final_command_guard",
+    "/baseline/scan missing sensor_msgs/msg/LaserScan reader /frenet_cpp_controller",
+    "/baseline/scan missing sensor_msgs/msg/LaserScan reader /frenet_cpp_planner",
+    "/baseline/scan missing sensor_msgs/msg/LaserScan reader /particle_filter",
+    "/baseline/scan: no sample",
+    "/stage1_offline/reset_latch missing std_msgs/msg/Bool reader /final_command_guard",
+    "/stand_pf/actuator_input expected writer /stand_window, observed []",
+    "/stand_pf/actuator_input missing ackermann_msgs/msg/AckermannDriveStamped reader /hardware_actuator_guard",
+    "/stand_pf/actuator_input: no sample",
+    "/stand_pf/actuator_status expected writer /hardware_actuator_guard, observed []",
+    "/stand_pf/actuator_status missing std_msgs/msg/String reader /stand_pf_supervisor",
+    "/stand_pf/actuator_status: no sample",
+    "/stand_pf/disabled_brake missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/disabled_duty_cycle missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/disabled_position missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/health expected writer /stand_telemetry_bridge, observed []",
+    "/stand_pf/health missing std_msgs/msg/String reader /ground_health_interlock",
+    "/stand_pf/health: no sample",
+    "/stand_pf/health_guard_status expected writer /ground_health_interlock, observed []",
+    "/stand_pf/health_guard_status missing std_msgs/msg/String reader /stand_pf_supervisor",
+    "/stand_pf/health_guard_status: no sample",
+    "/stand_pf/health_permit expected writer /ground_health_interlock, observed []",
+    "/stand_pf/health_permit missing std_msgs/msg/Bool reader /stand_window",
+    "/stand_pf/health_permit: no sample",
+    "/stand_pf/motor_current expected writer /hardware_actuator_guard, observed []",
+    "/stand_pf/motor_current missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/motor_current: no sample",
+    "/stand_pf/motor_speed expected writer /hardware_actuator_guard, observed []",
+    "/stand_pf/motor_speed missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/permit expected writer /stand_pf_supervisor, observed []",
+    "/stand_pf/permit missing std_msgs/msg/Bool reader /stand_window",
+    "/stand_pf/servo expected writer /hardware_actuator_guard, observed []",
+    "/stand_pf/servo: no sample",
+    "/stand_pf/servo_disabled missing std_msgs/msg/Float64 reader /vesc_driver",
+    "/stand_pf/servo_feedback expected writer /vesc_driver, observed []",
+    "/stand_pf/telemetry expected writer /vesc_driver, observed []",
+    "/stand_pf/telemetry missing vesc_msgs/msg/VescStateStamped reader /stand_telemetry_bridge",
+    "/stand_pf/telemetry missing vesc_msgs/msg/VescStateStamped reader /stand_vesc_odometry",
+    "/stand_pf/window_status expected writer /stand_window, observed []",
+    "/stand_pf/window_status missing std_msgs/msg/String reader /stand_pf_supervisor",
+    "/stand_pf/window_status: no sample",
+    "commissioned supervisor unverified before or at end of observation: MISSING_SUPERVISOR",
+    "fewer than two synchronized snapshots or latest snapshot stale",
+    "no synchronized rows accepted with verified session and graph"
+  ],
+  "samples": {
+    "count": {},
+    "last": {},
+    "invalid_latest": {},
+    "synchronized_count": 0
+  }
+}
