@@ -1,0 +1,5 @@
+method,mode,trials,finished,collisions,boundaries,outcomes,mean_progress_m_all,mean_finished_p95_cte_cm,mean_finished_cte_rmse_cm,mean_finish_s
+mpcc,sync,6,6,0,0,finished=6,44.73153929638099,2.8062698024582984,1.9287794280619157,25.3
+mpcc,mean,6,4,0,0,finished=4 time_limit=2,44.73153929638099,24.160985587952858,12.185304579163471,26.375
+mpcc,shuffled,6,0,0,0,time_limit=6,44.73153929638099,,,
+mpcc,ordered,6,0,0,0,time_limit=6,44.681539674531045,,,

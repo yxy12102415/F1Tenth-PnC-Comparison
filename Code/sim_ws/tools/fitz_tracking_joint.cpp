@@ -35,11 +35,12 @@ frenet::Path geometric_window(const frenet::Assets &assets, double remaining) {
 class FixedRouteController {
  public:
   FixedRouteController(const std::string &method, const std::string &map, double cap,
-                       unsigned seed)
+                       unsigned seed, bool vehicle_envelope)
       : assets_(map), cap_(cap), tracker_("dynamic_mpc") {
+    const auto limits = vehicle_envelope ? frenet::joint_model::vehicle_limits : frenet::joint_model::default_limits;
     if (method == "nmpc") nmpc_.reset(new frenet::JointControl(
-        true, cap, true, frenet::TimedDriveProfile::gym_fixed_route));
-    else if (method == "mppi") mppi_.reset(new takeover::MppiControl(cap, seed));
+        true, cap, true, frenet::TimedDriveProfile::gym_fixed_route, limits));
+    else if (method == "mppi") mppi_.reset(new takeover::MppiControl(cap, seed, limits));
     else throw std::runtime_error("expected nmpc or mppi");
   }
 
@@ -145,15 +146,16 @@ class FixedRouteController {
 }  // namespace
 
 int main(int argc, char **argv) {
-  if (argc != 5) {
-    std::cerr << "Usage: fitz_tracking_joint nmpc|mppi assets.json max_speed seed\n";
+  const bool vehicle_envelope = argc == 6 && std::string(argv[5]) == "--vehicle-envelope";
+  if (argc != 5 && !vehicle_envelope) {
+    std::cerr << "Usage: fitz_tracking_joint nmpc|mppi assets.json max_speed seed [--vehicle-envelope]\n";
     return 2;
   }
   // Keep native C solver diagnostics off the JSON response stream.
   FILE *responses = fdopen(dup(STDOUT_FILENO), "w");
   if (!responses || dup2(STDERR_FILENO, STDOUT_FILENO) < 0) return 2;
   try {
-    FixedRouteController controller(argv[1], argv[2], std::stod(argv[3]), std::stoul(argv[4]));
+    FixedRouteController controller(argv[1], argv[2], std::stod(argv[3]), std::stoul(argv[4]), vehicle_envelope);
     std::string line;
     while (std::getline(std::cin, line)) {
       Json::Value request;

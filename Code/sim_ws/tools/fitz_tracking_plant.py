@@ -134,14 +134,18 @@ class Plant:
                 "vy": float(obs["linear_vels_y"][0]), "yaw_rate": float(obs["ang_vels_z"][0]),
                 "collision": bool(obs["collisions"][0]), "boundary": self._boundary(x, y, yaw)}
 
-    def step(self, speed, steer):
+    def step_physics(self, speed, steer):
         action = np.array([[steer, speed]], dtype=float)
         if not np.isfinite(action).all():
             raise ValueError("Non-finite Gym command")
+        obs, _, _, _ = self.env.step(action)
+        self._physics_steps += 1
+        self.state = self._observation(obs)
+        return self.state
+
+    def step(self, speed, steer):
         for _ in range(round(CONTROL_DT / PHYSICS_DT)):
-            obs, _, _, _ = self.env.step(action)
-            self._physics_steps += 1
-            self.state = self._observation(obs)
+            self.step_physics(speed, steer)
             if self.state["collision"] or self.state["boundary"]:
                 break
         return self.state

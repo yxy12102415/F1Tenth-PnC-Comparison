@@ -28,13 +28,17 @@ REPO = SIM.parents[1]
 NATIVE = SIM / "build/fitz_tracking/fitz_tracking_joint"
 ASSETS = SIM / "takeover_assets/Fitzpatrick_sim.json"
 ROUTE_FILE = REPO / "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv"
-METHODS = ("pp", "lqr", "linear_mpc", "nmpc", "mppi")
-NAMES = dict(zip(METHODS, ("Pure Pursuit", "LQR", "Linear MPC", "NMPC", "MPPI")))
+TRACKERS = ("pp", "lqr", "linear_mpc", "nmpc", "mppi")
+METHODS = (*TRACKERS, "mpcc")
+NAMES = dict(zip(METHODS, ("Pure Pursuit", "LQR", "Linear MPC", "NMPC", "MPPI", "MPCC")))
 CASES = {"center": (0., 0.), "left": (.10, 4.), "right": (-.10, -4.)}
 DT = .05
 BUDGET_MS = 45.
 PARAMS = dict(dt=DT, wheelbase=.3302, max_speed=2., max_accel=3., max_decel=3.,
               max_steer=.4189, max_steer_rate=.8, max_accel_step=.15)
+# Gym dynamics with the commissioned vehicle's command magnitudes, held common
+# for the timing experiment. The two experiments share conservative slew bounds.
+VEHICLE_PARAMS = dict(PARAMS, max_steer=.269, max_accel=1., max_decel=.8)
 END = dict(remaining_m=.15, distance_m=.20, yaw_rad=.18, speed_mps=.10, dwell_s=.50)
 COLUMNS = ("t_s", "x", "y", "yaw", "v", "vy", "yaw_rate", "s_m", "cte_m",
            "heading_error_rad", "ref_v_mps", "ref_x", "ref_y", "cmd_v_mps", "cmd_delta_rad",
@@ -56,9 +60,19 @@ def wrap(x):
 
 
 @contextlib.contextmanager
-def controller(method, seed, folder):
-    if method in ("pp", "lqr", "linear_mpc"):
-        ctrl = ClassicController(method, PARAMS.copy())
+def controller(method, seed, folder, route=None, *, vehicle_envelope=False):
+    params = VEHICLE_PARAMS if vehicle_envelope else PARAMS
+    if method == "mpcc":
+        from fitz_tracking_mpcc import ContouringController
+        ctrl = ContouringController(route, params)
+
+        def command(state, ref, remaining):
+            start = time.perf_counter()
+            speed, steer = ctrl.step(state, route.length - remaining)
+            return speed, steer, (time.perf_counter() - start) * 1000.
+        yield command
+    elif method in ("pp", "lqr", "linear_mpc"):
+        ctrl = ClassicController(method, params.copy())
 
         def command(state, ref, remaining):
             start = time.perf_counter()
@@ -67,7 +81,10 @@ def controller(method, seed, folder):
         yield command
     else:
         with (folder / "solver.log").open("w") as log:
-            process = subprocess.Popen([str(NATIVE), method, str(ASSETS), "2.0", str(seed)],
+            args = [str(NATIVE), method, str(ASSETS), str(params["max_speed"]), str(seed)]
+            if vehicle_envelope:
+                args.append("--vehicle-envelope")
+            process = subprocess.Popen(args,
                                        stdin=subprocess.PIPE, stdout=subprocess.PIPE,
                                        stderr=log, text=True, bufsize=1)
 
@@ -112,7 +129,7 @@ def trial(route, method, case, seed, folder, timeout):
     reason, detail = "time_limit", ""
     failure_ms = None
     try:
-        with controller(method, seed, folder) as step:
+        with controller(method, seed, folder, route) as step:
             for _ in range(round(timeout / DT)):
                 if state["collision"] or state["boundary"]:
                     reason = "collision" if state["collision"] else "boundary"
@@ -225,7 +242,7 @@ def plot(out, route, rows):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(METHODS))
+    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(TRACKERS))
     parser.add_argument("--cases", nargs="+", choices=CASES, default=list(CASES))
     parser.add_argument("--seeds", nargs="+", type=int, default=[11, 29])
     parser.add_argument("--output", type=Path, default=SIM / "results/fitz_tracking" /
@@ -257,16 +274,20 @@ def main():
                REPO/"real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/generate_joint_solver.py"]
     if NATIVE.exists() and any(m in ("nmpc","mppi") for m in args.methods):
         sources.extend([ASSETS,NATIVE])
+    packages = ["gym", "f110-gym", "numpy", "scipy", "osqp"]
+    if "mpcc" in args.methods:
+        packages.append("casadi")
     gym_module = Path(inspect.getfile(f110_gym)).resolve().parent
     save(out/"manifest.json", dict(route_length_m=route.length, control_dt_s=DT, physics_dt_s=.01,
          method_order=order, cases_offset_m_heading_deg=CASES, params=PARAMS, end=END,
          gym_git=git_revision(gym_module),
          gym_package=f110_gym.__name__, observer="Gym pose and longitudinal speed / yaw rate",
          reference_policy="project current position onto unwrapped arc; read shared 25-stage reference; stopped finish",
-         noise="no injected pose noise; nominal classic and NMPC runs are deterministic by design",
+         mpcc_progress_policy="geometry only; free virtual progress speed, 2 m/s cap, standing finish" if "mpcc" in args.methods else None,
+         noise="no injected pose noise; seeds vary MPPI sampling",
          sim_timeout_s=args.time_limit, measured_budget_ms=BUDGET_MS, platform=platform.platform(),
          python=sys.version, commit=git_revision(REPO),
-         versions={k:importlib.metadata.version(k) for k in ("gym","f110-gym","numpy","scipy","osqp")},
+         versions={k:importlib.metadata.version(k) for k in packages},
          sha256={str(p.relative_to(REPO)):filehash(p) for p in sources if p.is_file()}))
     print(f"Output: {out}", flush=True)
     rows = []

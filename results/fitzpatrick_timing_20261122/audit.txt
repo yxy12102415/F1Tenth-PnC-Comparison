@@ -1,0 +1,1 @@
+Verified 120 trials, 91649 commands, 90 paired contrasts; outcomes {'finished': 74, 'time_limit': 46}.

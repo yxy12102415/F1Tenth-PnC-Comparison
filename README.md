@@ -35,6 +35,8 @@ Tracking trials start from rest, either centered or displaced 0.10 m left or rig
 
 The choice of error metric affects the comparison. Linear MPC had a lower mean heading error than Pure Pursuit (1.83° versus 2.71°), while Pure Pursuit held the car closer to the reference line (2.31 versus 2.94 cm). Seeds vary MPPI sampling. With exact state feedback, repeated runs of deterministic controllers mainly provide additional timing measurements.
 
+A separate MPCC experiment lets the car choose its progress speed along the same route. All six simulations (three distinct initial poses, each repeated) reached the stopped finish, with zero collisions or boundary violations. Mean elapsed time including the finish dwell was **24.73 s**, mean per-trial lateral RMSE **2.08 cm**, and mean per-trial compute P95 **32.23 ms**. Six of 2,968 calls exceeded the 50 ms control period. This experiment uses a different speed objective from the five fixed-reference trackers and has no hardware timing validation. The first development solver hit its iteration limit on the centered start; the archived run used local route linearization and a smooth actuator response. [Trajectories](results/fitzpatrick_mpcc_20261121/figures/mpcc.png) · [Trial data](results/fitzpatrick_mpcc_20261121/trials.json) · [Development failure](results/fitzpatrick_mpcc_20261121/development/first_center/summary.json)
+
 ### Static obstacle avoidance
 
 Each cell gives the number of successful runs out of **three**. A and B are two separate sites for 0.10 m obstacles. The matched layouts use 0.40 m cylinders. Each staggered layout adds a second cylinder 2.50 m downstream on the opposite side of the line. Left and right are relative to travel direction. [Layout map and dimensions](results/fitzpatrick_local_design_20261120/layout.png)
@@ -59,6 +61,8 @@ On a Jetson Xavier NX, all ten methods produced valid outputs at all eight times
 
 The campaigns use one mapped circuit, simulator ego pose, and three seeds per obstacle layout. The completion counts characterize these cases. A broader estimate of robustness would require additional tracks, localization errors, and repeated physical trials.
 
+A supplementary closed-loop Gym experiment measures how sensor age and command delays affect all five fixed-reference controllers on Fitzpatrick. It includes synchronous, constant-mean, shuffled and burst-ordered synthetic timing. [Protocol and reproduction commands](docs/FITZPATRICK_TIMING.md) · [Fixed-reference results](results/fitzpatrick_timing_20261122/REPORT.md) · [Free-progress MPCC timing results](results/fitzpatrick_mpcc_timing_20261122/REPORT.md)
+
 ## Reproduction
 
 Use Ubuntu 22.04 x86-64 and Python 3.10. Install the system packages listed in the setup guide, then run the following commands from the repository root. The GUI opens an interactive Frenet lattice trial with trajectory replay. [Installation and dependencies](docs/SIM_SETUP.md)
@@ -66,6 +70,7 @@ Use Ubuntu 22.04 x86-64 and Python 3.10. Install the system packages listed in t
 ```bash
 bash tools/setup_sim.sh
 bash Code/sim_ws/run_fitz_tracking.sh                       # 30 controller trials
+bash Code/sim_ws/run_fitz_tracking.sh --methods mpcc        # separate free-progress experiment
 bash Code/sim_ws/run_fitz_local.sh --seeds 11 29 47          # 120 planning trials
 bash Code/sim_ws/run_fitz_local.sh --gui                    # inspect a maneuver
 .deps/sim_env/bin/python tools/plot_tracking_tradeoff.py    # regenerate Figure 1

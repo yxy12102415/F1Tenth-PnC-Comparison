@@ -24,7 +24,10 @@ public:
   int samples=256, iterations=2;
   double temperature=.5, sigma_a=.8, sigma_delta=.065;
   Json::Value diag;
-  explicit MppiControl(double cap=3.,unsigned seed=0):cap_(cap),rng_(seed) {
+  explicit MppiControl(double cap=3.,unsigned seed=0,
+                       frenet::joint_model::CommandLimits limits=frenet::joint_model::default_limits)
+      :cap_(cap),limits_(limits),rng_(seed) {
+    limits_.validate();
     if(!std::isfinite(cap) || cap<.7 || cap>3.) throw std::runtime_error("mppi_cap_invalid");
   }
   double command_speed() const {return command_;}
@@ -34,12 +37,13 @@ public:
 
   // Same backward-Euler dynamic bicycle and actuator model as native Gym MPC.
   // Public for analytic/model-agreement tests; dt is fixed to the 20 Hz clock.
-  static State step(State x,Input &u,double cap) {
+  static State step(State x,Input &u,double cap,
+                    frenet::joint_model::CommandLimits limits=frenet::joint_model::default_limits) {
     constexpr double h=.05;
-    u.a=clip(u.a,std::max(-frenet::joint_model::deceleration_limit,x.a-.15),
-                std::min(frenet::joint_model::acceleration_limit,x.a+.15));
-    u.delta=clip(u.delta,std::max(-frenet::joint_model::steering_limit,x.delta-.04),
-                        std::min(frenet::joint_model::steering_limit,x.delta+.04));
+    u.a=clip(u.a,std::max(-limits.deceleration,x.a-.15),
+                std::min(limits.acceleration,x.a+.15));
+    u.delta=clip(u.delta,std::max(-limits.steering,x.delta-.04),
+                        std::min(limits.steering,x.delta+.04));
     u.a=clip(u.a,-x.command/h,(cap-x.command)/h);
     const double c=x.command+h*u.a;
     const double s=x.servo+h/(frenet::joint_model::steering_tau+h)*(u.delta-x.servo);
@@ -87,13 +91,13 @@ public:
       const double dv=(ref[j+1].speed-r.speed)/.05;
       const double desired=ref[j+1].speed+frenet::joint_model::longitudinal_tau(ref[j+1].speed,x.v)*dv;
       seed[j].a=3.*(desired-x.command)+2.*(r.speed-x.v);
-      x=step(x,seed[j],cap_);
+      x=step(x,seed[j],cap_,limits_);
     }
     auto rollout=[&](Sequence &u,bool save) {
       State s=initial;double cost=0.;
       if(save){prediction_={pose};diag["predicted_speed_mps"]=Json::Value(Json::arrayValue);diag["predicted_speed_mps"].append(speed);}
       for(int j=0;j<horizon;++j) {
-        const auto old=s;s=step(s,u[j],cap_);
+        const auto old=s;s=step(s,u[j],cap_,limits_);
         if(!safe(assets,s,j+1,world,initial.v)) return INF;
         const auto &r=ref[j+1];
         const double dx=s.pose.x-r.pose.x,dy=s.pose.y-r.pose.y;
@@ -149,7 +153,7 @@ public:
     }
     diag=Json::Value();
     if(!std::isfinite(rollout(nominal,true))) throw std::runtime_error("mppi_updated_rollout_invalid");
-    Input first=nominal[0];const State next=step(initial,first,cap_);
+    Input first=nominal[0];const State next=step(initial,first,cap_,limits_);
     const double elapsed=(frenet::mono()-begin)*1000.;
     if(elapsed>45.)throw std::runtime_error("mppi_control_deadline");
     sequence_=nominal;warm_=true;command_=next.command;servo_=next.servo;
@@ -163,12 +167,13 @@ public:
     diag["steering_command_rad"]=delta_;diag["timed_reference_age_s"]=timed.age;
     diag["timed_position_error_m"]=(pose.xy()-ref[0].pose.xy()).norm();
     diag["timed_speed_error_mps"]=speed-ref[0].speed;
-    diag["configured_acceleration_limit_mps2"]=frenet::joint_model::acceleration_limit;
-    diag["configured_deceleration_limit_mps2"]=frenet::joint_model::deceleration_limit;
+    diag["configured_acceleration_limit_mps2"]=limits_.acceleration;
+    diag["configured_deceleration_limit_mps2"]=limits_.deceleration;
     return {command_,delta_};
   }
 private:
   double cap_,command_=0.,acceleration_=0.,delta_=0.,servo_=0.;
+  frenet::joint_model::CommandLimits limits_;
   bool warm_=false;
   Sequence sequence_{};
   std::mt19937 rng_;

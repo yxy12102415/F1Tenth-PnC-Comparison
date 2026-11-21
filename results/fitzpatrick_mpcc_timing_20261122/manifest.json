@@ -1,0 +1,243 @@
+{
+  "source": "synthetic paired timing profiles; no physical timing replay",
+  "reference_policy": "free progress on route geometry",
+  "route_length_m": 44.73153929638099,
+  "physics_dt_s": 0.01,
+  "control_dt_s": 0.05,
+  "time_limit_s": 55.0,
+  "cases": {
+    "center": [
+      0.0,
+      0.0
+    ],
+    "left": [
+      0.1,
+      4.0
+    ],
+    "right": [
+      -0.1,
+      -4.0
+    ]
+  },
+  "end": {
+    "remaining_m": 0.15,
+    "distance_m": 0.2,
+    "yaw_rad": 0.18,
+    "speed_mps": 0.1,
+    "dwell_s": 0.5
+  },
+  "command_parameters": {
+    "dt": 0.05,
+    "wheelbase": 0.3302,
+    "max_speed": 2.0,
+    "max_accel": 1.0,
+    "max_decel": 0.8,
+    "max_steer": 0.269,
+    "max_steer_rate": 0.8,
+    "max_accel_step": 0.15
+  },
+  "planned_order": [
+    [
+      "mpcc",
+      "sync",
+      "center",
+      11
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "center",
+      11
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "center",
+      11
+    ],
+    [
+      "mpcc",
+      "mean",
+      "center",
+      11
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "left",
+      11
+    ],
+    [
+      "mpcc",
+      "mean",
+      "left",
+      11
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "left",
+      11
+    ],
+    [
+      "mpcc",
+      "sync",
+      "left",
+      11
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "right",
+      11
+    ],
+    [
+      "mpcc",
+      "mean",
+      "right",
+      11
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "right",
+      11
+    ],
+    [
+      "mpcc",
+      "sync",
+      "right",
+      11
+    ],
+    [
+      "mpcc",
+      "sync",
+      "center",
+      29
+    ],
+    [
+      "mpcc",
+      "mean",
+      "center",
+      29
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "center",
+      29
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "center",
+      29
+    ],
+    [
+      "mpcc",
+      "sync",
+      "left",
+      29
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "left",
+      29
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "left",
+      29
+    ],
+    [
+      "mpcc",
+      "mean",
+      "left",
+      29
+    ],
+    [
+      "mpcc",
+      "sync",
+      "right",
+      29
+    ],
+    [
+      "mpcc",
+      "ordered",
+      "right",
+      29
+    ],
+    [
+      "mpcc",
+      "mean",
+      "right",
+      29
+    ],
+    [
+      "mpcc",
+      "shuffled",
+      "right",
+      29
+    ]
+  ],
+  "git": "be464064b6da863de04de83b765a109846fff818",
+  "source_sha256": {
+    "Code/sim_ws/build/fitz_tracking/fitz_tracking_joint": "69da81f28e99f8f73ae7eb6ba14a1ca331ffdd6786a6221d07390e83b19c1f2d",
+    "Code/sim_ws/build/fitz_tracking/libfitz_tracking_gym_solver.so": "cc74aaa9b727dc9073695918c06df021240a3d8ffd579f63ff5d506f249e1923",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/acados_solver_joint_vehicle.c": "e78c10cf40662945794eb76fbc18c1f4390f2d8b81b3c8ddf1074bb7d9c97373",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_0_fun.c": "6463e45b01ade947a51262ae399a646e9c3b74957ec0e139f971080f560fbe9d",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_0_fun_jac_uxt_zt.c": "c907441be05e08093aac9a9c28bc5aa2d1e28a2bf6c17519ee335d84967b861f",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_e_fun.c": "1329777699a751a93fa9b3fccefd2a7c601c4281178aa415897deb2c4327a402",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_e_fun_jac_uxt_zt.c": "a955242ffae06b57fb26a5fa0705361903a720c3693221928abd98d8ee67bbb9",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_fun.c": "a9f00107a384fb77218222a116acea03002841c22289b34b78cbbc0d9f50d5fc",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_constraints/joint_vehicle_constr_h_fun_jac_uxt_zt.c": "cf1a00f75d33419239b348bfc80f2cd389d442fd30592da022dfc4fa8e685dc3",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_0_fun.c": "a4ff2220a43c3fef0a9536e52806ae6d61eea60f32277fdec11380ed452c412e",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_0_fun_jac_ut_xt.c": "2ce8d4fdafc12329322a400708c76955a432599cbbf67aae0f3e37ad04a09c26",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_0_hess.c": "e09234406c2a8ade445ccbd2924dfda1cecba89b9ac9e3212bfb7a289ab0d182",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_e_fun.c": "d9f20c00486762f1c2a1c124c707ca84f49b2a544bc0d7403c04b2d81e315558",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_e_fun_jac_ut_xt.c": "1eb2652f1c939a8ab790d19457efbf139489da675d3d5105fd86b0d293c9d7b4",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_e_hess.c": "950310716e39720e8d761a363b26e257ba1f0ef4e406ec50fc9087fc72ec2cbf",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_fun.c": "eb1f12b2a60e8dd61d18a5f3cecbe495b8424f7133aa0ca16584a40748cdd4c1",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_fun_jac_ut_xt.c": "b736b4dae805251c5120abb2b95ad0b05b68836b02e9e802e8d6a7287007c2a6",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_cost/joint_vehicle_cost_y_hess.c": "04ec2e87a1072bea2218267e9d88b703441bd1c6e4082453b19a8aff71f5c5b6",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_model/joint_vehicle_dyn_disc_phi_fun.c": "ea9261f34f61b4e6c1a474664a7138c059dc12201199f71ecf1eb92af9750644",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_model/joint_vehicle_dyn_disc_phi_fun_jac.c": "da3f97906b340496a609f027a989fdfd7842815cda386563feaac427e538ddfb",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/joint_vehicle_model/joint_vehicle_dyn_disc_phi_fun_jac_hess.c": "33192eadca1576d6ae12619079d52dc5a08523459bf7ba6f7e4a85e1248c6912",
+    "Code/sim_ws/build/takeover_sim/gym_model/generated_joint/main_joint_vehicle.c": "526e1329aa21652e3d4049299d9c2acb9f4e09861d9969dc6e0598eb2acbc7de",
+    "Code/sim_ws/run_fitz_timing.sh": "a5614235a97d2450895f879bb7a734b2d5de1f01143d222bef7b2045b49910d2",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.png": "4f4ca3409bce71caed53d0151646d3827345658ae1589fb6a939f845752e8990",
+    "Code/sim_ws/src/f1tenth_gym_ros/maps/Fitzpatrick_sim.yaml": "aecade55f02f1d6e43fd832120d266a8dcab377d554adaeb10b1ac3efdd784f8",
+    "Code/sim_ws/src/takeover_sim/include/takeover_sim/dynamic_overtaking.hpp": "cb6ca005f00f215869750df0dc502900bad995c18905b6381a59fe9bab7e54bc",
+    "Code/sim_ws/src/takeover_sim/include/takeover_sim/mppi_control.hpp": "068b5dcfcb30bc852ff29d7c7478a5e68e50a2ac2430ffe13c241a60e44beecf",
+    "Code/sim_ws/takeover_assets/Fitzpatrick_sim.json": "99686b489834a7f6da1d09faeb8c96baeaed996a389c494ddf1fd9c55988a0a3",
+    "Code/sim_ws/tools/build_fitz_tracking_joint.sh": "41e2fc5f12295d648b1a780a827e55e904d74f0214e29268a4a5862a038055d2",
+    "Code/sim_ws/tools/fitz_timing_profiles.py": "4e053c86ddd0334ea481440b21b954af2a9c0829896737ea2bba9a69b5918e4c",
+    "Code/sim_ws/tools/fitz_timing_trial.py": "fdb6fddfb2ab6b9f25c9957fe34af64b2a4b1e45b403b7f5e6fff18a65ce09e0",
+    "Code/sim_ws/tools/fitz_tracking_classic.py": "16dc19b5cdaf8117e9e0e7e8c12b7346985dc85ee434c818854478e463a99af3",
+    "Code/sim_ws/tools/fitz_tracking_joint.cpp": "ad06f06568c65a8598a61008d0e77f41cce0bec6fe5e8da396807b089b49e262",
+    "Code/sim_ws/tools/fitz_tracking_mpcc.py": "359387b16c626837da527010ecf292756010b0ee89c2c6836087757caa44a446",
+    "Code/sim_ws/tools/fitz_tracking_plant.py": "5d1a83ee7e66d044afe6db93b1cccd9ef0b84c8735e0afbf0acc28eb5729ba71",
+    "Code/sim_ws/tools/generate_gym_mpc.sh": "0bbca0f37a98f608571f8331e74d6d6e2eb147b4225d3420ef6d69cf9439e034",
+    "Code/sim_ws/tools/report_fitz_timing.py": "0c2774d99515b8c8eb39658e214bab12995e1bd06cbc4af823dd7491e68268e6",
+    "Code/sim_ws/tools/run_fitz_timing.py": "9b84932ee6807f309ec19731b79285cef2a7f32eecafe66b24f49b06b3521105",
+    "Code/sim_ws/tools/run_fitz_tracking.py": "b7e9aba9da48d0e2c7ed9f18a4b7ebe95fbf6314e7a030a3ce7360c268d15a43",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/generate_joint_solver.py": "b3390fa120fc51232a5ed46fa1de0d4c2aef9bf7b973c0fe70a99e30a70356e2",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/core.hpp": "2f7755c9fd5552e710b64acd2de5979986abd8044b21653e86dc7f9f16c2ec8c",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/joint_control.hpp": "df32aa7d9ff685775850532e0fbf65ec136ed16052b3e4dca3f29906cd8a013a",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/perception.hpp": "4fdcc06b34a2d376374be714fb74d0a67016352e2b1ea3f5eeb20c7a82b4370a",
+    "real_vehicle/candidate_cpp_gpu_20260909/ground_fitzpatrick_joint_20260927_v8/src/cpp_frenet/tracker.hpp": "3765fd72f1771e3d48ef88a09d23b19dd713fcdfc37e01da8a5af6192050b4be",
+    "real_vehicle/routes/Fitzpatrick_fixed_start_arc_straight_v2_speed_profile.csv": "f01017527f0cc78069d57db0396b63269b4007e7d8e15c6899e2c936612895d4"
+  },
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "packages": {
+    "f110-gym": "0.2.1",
+    "gym": "0.19.0",
+    "numpy": "1.21.5",
+    "scipy": "1.8.0",
+    "osqp": "0.6.3",
+    "casadi": "3.6.6"
+  }
+}

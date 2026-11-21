@@ -23,6 +23,17 @@ constexpr int rti_passes=4;
 inline double longitudinal_tau(double,double){return .15;}
 #endif
 constexpr double wheelbase=lf+lr;
+struct CommandLimits {
+  double acceleration, deceleration, steering;
+  void validate() const {
+    if(!(acceleration > 0 && acceleration <= acceleration_limit &&
+         deceleration > 0 && deceleration <= deceleration_limit &&
+         steering > 0 && steering <= steering_limit))
+      throw std::runtime_error("command_envelope_outside_vehicle_model_bounds");
+  }
+};
+constexpr CommandLimits default_limits{acceleration_limit, deceleration_limit, steering_limit};
+constexpr CommandLimits vehicle_limits{1.0, .8, .269};
 }
 struct Control { double speed=0, angle=0; };
 struct TimedReferencePoint { double t; Pose pose; double speed; };
@@ -130,25 +141,36 @@ class JointControl {
   double speed_limit_=2.0;
   bool measured_yaw_feedback_=false;
   TimedDriveProfile drive_profile_;
+  joint_model::CommandLimits limits_;
   std::array<std::array<double,10>,25> predicted{};
   Path accepted_prediction_;
 public:
   Json::Value diag;
   explicit JointControl(bool mpc, double speed_limit=2.0, bool measured_yaw_feedback=false,
-                        TimedDriveProfile drive_profile=TimedDriveProfile::physical_coast)
+                        TimedDriveProfile drive_profile=TimedDriveProfile::physical_coast,
+                        joint_model::CommandLimits limits=joint_model::default_limits)
       :speed_limit_(speed_limit),measured_yaw_feedback_(measured_yaw_feedback),
-       drive_profile_(drive_profile) {
+       drive_profile_(drive_profile),limits_(limits) {
 #ifndef TAKEOVER_OFFICIAL_GYM_MODEL
     if(drive_profile_==TimedDriveProfile::gym_fixed_route)
       throw std::runtime_error("gym_fixed_route_profile_requires_gym");
 #endif
     if(!std::isfinite(speed_limit_) || speed_limit_<.70 || speed_limit_>3.0)
       throw std::runtime_error("joint_speed_limit_invalid");
+    limits_.validate();
     if(mpc) {
       capsule=joint_vehicle_acados_create_capsule();
       if(!capsule || joint_vehicle_acados_create(capsule)) throw std::runtime_error("joint_solver_create");
       config=joint_vehicle_acados_get_nlp_config(capsule);dims=joint_vehicle_acados_get_nlp_dims(capsule);
       in=joint_vehicle_acados_get_nlp_in(capsule);out=joint_vehicle_acados_get_nlp_out(capsule);
+      // Apply the selected actuator envelope to every shooting input. The
+      // simulator can narrow these bounds without changing its plant model.
+      double lower[2]={-limits_.deceleration, -limits_.steering};
+      double upper[2]={limits_.acceleration, limits_.steering};
+      for(int i=0;i<24;++i) {
+        ocp_nlp_constraints_model_set(config,dims,in,i,"lbu",lower);
+        ocp_nlp_constraints_model_set(config,dims,in,i,"ubu",upper);
+      }
       double W[100]={0},We[36]={0};
       const double w[10]={3.,160.,140.,18.,1.,.5,.3,1.2,2.,180.};
       const double we[6]={5.,240.,210.,30.,1.,.5};
@@ -171,6 +193,8 @@ public:
     if(speed_limit_!=other.speed_limit_) throw std::runtime_error("preview_speed_limits_differ");
     if(measured_yaw_feedback_!=other.measured_yaw_feedback_)
       throw std::runtime_error("preview_yaw_feedback_modes_differ");
+    if(limits_.acceleration!=other.limits_.acceleration || limits_.deceleration!=other.limits_.deceleration ||
+       limits_.steering!=other.limits_.steering) throw std::runtime_error("preview_command_limits_differ");
     if(drive_profile_!=other.drive_profile_)
       throw std::runtime_error("preview_drive_profiles_differ");
     command=other.command;acceleration=other.acceleration;steering=other.steering;
@@ -404,7 +428,7 @@ public:
         diag["timed_horizon_max_position_error_m"]=max_position;
         diag["timed_horizon_speed_rmse_mps"]=std::sqrt(squared_speed/25.);
       }
-      if(!std::isfinite(u[0]+u[1]) || std::abs(u[1])>joint_model::steering_limit+.00001 || u[0]<-joint_model::deceleration_limit-.00001 || u[0]>joint_model::acceleration_limit+.00001 || std::abs(u[1]-steering)>steer_step+1e-4 || std::abs(u[0]-acceleration)>accel_step+1e-4)
+      if(!std::isfinite(u[0]+u[1]) || std::abs(u[1])>limits_.steering+.00001 || u[0]<-limits_.deceleration-.00001 || u[0]>limits_.acceleration+.00001 || std::abs(u[1]-steering)>steer_step+1e-4 || std::abs(u[0]-acceleration)>accel_step+1e-4)
         throw std::runtime_error("joint_control_constraint a="+std::to_string(u[0])+" delta="+std::to_string(u[1])+" previous="+std::to_string(acceleration)+","+std::to_string(steering)+" dt="+std::to_string(dt));
       // Execute exactly the solver's first command-state transition. Wall
       // timer jitter must not reintegrate the optimized acceleration with a
@@ -453,8 +477,8 @@ public:
     }
     diag["cross_track_error_m"]=g.cross;diag["heading_error_rad"]=g.heading;
     diag["measured_speed_mps"]=measured;diag["acceleration_command_mps2"]=acceleration;
-    diag["configured_acceleration_limit_mps2"]=joint_model::acceleration_limit;
-    diag["configured_deceleration_limit_mps2"]=joint_model::deceleration_limit;
+    diag["configured_acceleration_limit_mps2"]=limits_.acceleration;
+    diag["configured_deceleration_limit_mps2"]=limits_.deceleration;
     diag["speed_command_mps"]=command;diag["controller_compute_ms"]=(mono()-begin)*1000;
     if(mono()-begin>.045)throw std::runtime_error("joint_control_deadline");
     accepted_prediction_=trajectory;
